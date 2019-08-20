@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on DSkrzypiec Blog</title>
-    <link>https://dskrzypiec.github.io/blog/post/</link>
-    <description>Recent content in Posts on DSkrzypiec Blog</description>
+    <title>stats on DSkrzypiec Blog</title>
+    <link>https://dskrzypiec.github.io/blog/tags/stats/</link>
+    <description>Recent content in stats on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dskrzypiec.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dskrzypiec.github.io/blog/tags/stats/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

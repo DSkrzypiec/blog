@@ -6,19 +6,20 @@
     <description>Recent content in go on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dskrzypiec.github.io/blog/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>First Post</title>
-      <link>https://dskrzypiec.github.io/blog/firstpost/</link>
-      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      <title>What The Quantile Really Is?</title>
+      <link>https://dskrzypiec.github.io/blog/quantiles/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dskrzypiec.github.io/blog/firstpost/</guid>
-      <description>Intro Here will be some description and introduction about some topic on quantiles.
-Headings # Heading 1 ## Heading 2 ### Heading 3 #### Heading 4 ##### Heading 5 ###### Heading 6  Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic* _This will also be italic_ **This text will be bold** __This will also be bold__ _You **can** combine them_  This text will be italic</description>
+      <guid>https://dskrzypiec.github.io/blog/quantiles/</guid>
+      <description>Intro So what is a quantile? It&#39;s a statistic so it gives us aggregated information about some data sample. For example let&#39;s say we have data sample representing salary of employees of some company. Quantile can gives us answer on question &amp;quot;How much should I be paid to earn more then 90% of employees?&amp;quot;. Let&#39;s say sample is
+\[ S = \lbrace 140, 80, 70, 200, 100 \rbrace \]
+How would you answer the question for this sample?</description>
     </item>
     
   </channel>

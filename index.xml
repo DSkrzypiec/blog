@@ -12,13 +12,14 @@
     
     
     <item>
-      <title>First Post</title>
-      <link>https://dskrzypiec.github.io/blog/firstpost/</link>
-      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      <title>What The Quantile Really Is?</title>
+      <link>https://dskrzypiec.github.io/blog/quantiles/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dskrzypiec.github.io/blog/firstpost/</guid>
-      <description>Intro Here will be some description and introduction about some topic on quantiles.
-Headings # Heading 1 ## Heading 2 ### Heading 3 #### Heading 4 ##### Heading 5 ###### Heading 6  Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic* _This will also be italic_ **This text will be bold** __This will also be bold__ _You **can** combine them_  This text will be italic</description>
+      <guid>https://dskrzypiec.github.io/blog/quantiles/</guid>
+      <description>Intro So what is a quantile? It&#39;s a statistic so it gives us aggregated information about some data sample. For example let&#39;s say we have data sample representing salary of employees of some company. Quantile can gives us answer on question &amp;quot;How much should I be paid to earn more then 90% of employees?&amp;quot;. Let&#39;s say sample is
+\[ S = \lbrace 140, 80, 70, 200, 100 \rbrace \]
+How would you answer the question for this sample?</description>
     </item>
     
     <item>
@@ -27,7 +28,9 @@ Headings # Heading 1 ## Heading 2 ### Heading 3 #### Heading 4 ##### Heading 5 #
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.github.io/blog/about/</guid>
-      <description>About me and my blog Some info</description>
+      <description> About this blog Hi! I&amp;rsquo;m Damian and this is my blog. I wrote mostly about mathematics and programming in general. Here you can find posts about statistics, R, go, vim and databases.
+Contact In case you have any questions or want to check source code for some post here are my email and github:
+ Email github.com/DSkrzypiec  </description>
     </item>
     
   </channel>
