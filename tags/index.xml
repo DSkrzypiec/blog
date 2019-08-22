@@ -6,24 +6,15 @@
     <description>Recent content in Tags on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dskrzypiec.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>R</title>
-      <link>https://dskrzypiec.github.io/blog/tags/r/</link>
-      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dskrzypiec.github.io/blog/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>go</title>
       <link>https://dskrzypiec.github.io/blog/tags/go/</link>
-      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.github.io/blog/tags/go/</guid>
       <description></description>
@@ -32,7 +23,7 @@
     <item>
       <title>stats</title>
       <link>https://dskrzypiec.github.io/blog/tags/stats/</link>
-      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.github.io/blog/tags/stats/</guid>
       <description></description>
