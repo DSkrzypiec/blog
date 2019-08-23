@@ -14,11 +14,11 @@
     <item>
       <title>What the quantile really is?</title>
       <link>https://dskrzypiec.github.io/blog/quantiles/</link>
-      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.github.io/blog/quantiles/</guid>
-      <description>Intro For few years when I was practicing data science I&#39;ve used quantiles a lot. I knew what it is and when one should use it. I knew mathematical definition and intuition around quantiles but if someone asked me to program from scratch its implementation I probably wouldn&#39;t know how to do it right away.
-So what is a quantile? It&#39;s a one of most commonly used descriptive statistics. It gives us aggregated information about some data sample.</description>
+      <description>Intro For few years when I was practicing data science I&#39;ve used quantiles a lot. I knew what it is and when one should use it. I knew mathematical definition and intuition around quantiles but if someone would ask me to implement it from scratch I wouldn&#39;t know how to do it right away.
+So what is a quantile? It&#39;s a one of most commonly used descriptive statistic. It gives us aggregated information about sample&#39;s distribution.</description>
     </item>
     
     <item>
