@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on DSkrzypiec Blog</title>
-    <link>https://dskrzypiec.github.io/blog/tags/</link>
+    <link>https://dskrzypiec.dev/tags/</link>
     <description>Recent content in Tags on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dskrzypiec.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>benchmark</title>
-      <link>https://dskrzypiec.github.io/blog/tags/benchmark/</link>
+      <link>https://dskrzypiec.dev/tags/benchmark/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dskrzypiec.github.io/blog/tags/benchmark/</guid>
+      <guid>https://dskrzypiec.dev/tags/benchmark/</guid>
       <description></description>
     </item>
     
     <item>
       <title>database</title>
-      <link>https://dskrzypiec.github.io/blog/tags/database/</link>
+      <link>https://dskrzypiec.dev/tags/database/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dskrzypiec.github.io/blog/tags/database/</guid>
+      <guid>https://dskrzypiec.dev/tags/database/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go</title>
-      <link>https://dskrzypiec.github.io/blog/tags/go/</link>
+      <link>https://dskrzypiec.dev/tags/go/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dskrzypiec.github.io/blog/tags/go/</guid>
+      <guid>https://dskrzypiec.dev/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>stats</title>
-      <link>https://dskrzypiec.github.io/blog/tags/stats/</link>
+      <link>https://dskrzypiec.dev/tags/stats/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dskrzypiec.github.io/blog/tags/stats/</guid>
+      <guid>https://dskrzypiec.dev/tags/stats/</guid>
       <description></description>
     </item>
     
