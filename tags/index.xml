@@ -6,10 +6,19 @@
     <description>Recent content in Tags on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>techTalks</title>
+      <link>https://dskrzypiec.dev/tags/techtalks/</link>
+      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/techtalks/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>benchmark</title>
