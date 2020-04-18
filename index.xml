@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on DSkrzypiec Blog</title>
@@ -10,6 +10,15 @@
     
 	<atom:link href="https://dskrzypiec.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vim Movement</title>
+      <link>https://dskrzypiec.dev/vimmov/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/vimmov/</guid>
+      <description>After Vim Movement Challange [test]</description>
+    </item>
     
     <item>
       <title>Vim Movement Challenge</title>
@@ -57,7 +66,7 @@ So what is a quantile? It&#39;s a one of most commonly used descriptive statisti
       
       <guid>https://dskrzypiec.dev/about/</guid>
       <description>About this blog Hi! I&amp;rsquo;m Damian and this is my blog. I wrote mostly about mathematics and programming in general. Here you can find posts about statistics, R, go, vim and databases.
-About me You already know my name and I believe you can deduce my surname. I live in Earth-&amp;gt;Europe-&amp;gt;Poland-&amp;gt;Warsaw. I&amp;rsquo;m math postgrad but my main interest is programming and computer science. Currently my main language is go alongside with R and python.</description>
+About me You already know my name and I believe you can deduce my surname. I live in Earth-&amp;gt;Europe-&amp;gt;Poland-&amp;gt;Warsaw. I&amp;rsquo;m math postgrad but my main interest is programming and computer science. Currently my main language is go alongside with C# and R.</description>
     </item>
     
   </channel>

@@ -1,28 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://dskrzypiec.dev/post/</loc>
-    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dskrzypiec.dev/tags/</loc>
-    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dskrzypiec.dev/tags/vim/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dskrzypiec.dev/vimmov/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dskrzypiec.dev/vimmovchallenge/</loc>
     <lastmod>2019-10-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dskrzypiec.dev/tags/vim/</loc>
-    <lastmod>2019-10-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -33,7 +35,21 @@
   <url>
     <loc>https://dskrzypiec.dev/tags/techtalks/</loc>
     <lastmod>2019-10-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dskrzypiec.dev/tags/benchmark/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dskrzypiec.dev/tags/database/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dskrzypiec.dev/tags/go/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -42,32 +58,13 @@
   </url>
   
   <url>
-    <loc>https://dskrzypiec.dev/tags/benchmark/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dskrzypiec.dev/tags/database/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dskrzypiec.dev/tags/go/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://dskrzypiec.dev/tags/stats/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dskrzypiec.dev/quantiles/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dskrzypiec.dev/tags/stats/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
