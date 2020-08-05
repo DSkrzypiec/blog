@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.70.0-DEV" />
+  <meta name="generator" content="Hugo 0.57.0-DEV" />
   <link rel="canonical" href="https://dskrzypiec.dev/quantiles/">
 
   
@@ -414,7 +414,10 @@ we can compute</p>
 
 <p>So using default R method for calculating quantile we should expected final
 result as <span  class="math">\(176\)</span>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">quantile</span>(x <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">200</span>), probs <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.90</span>)</code></pre></div>
+
+<pre><code class="language-R">quantile(x = c(70, 80, 100, 140, 200), probs = 0.90)
+</code></pre>
+
 <p>Figure <code>1</code> presents how function <span  class="math">\(\gamma(p)\)</span> interpolates between sample points.
 One can observe that interpolation is linear between nodes. It seems like
 reasonable method of interpolation.</p>
