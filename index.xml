@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Writing a blog on smartphone</title>
+      <link>https://dskrzypiec.dev/smartphone/</link>
+      <pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/smartphone/</guid>
+      <description>Intro Nowadays smartphones are basically a pocket computers. Smartphone hardware evolution is very rapid. I was in a situation where my middle-tier phone was better than my current laptop. Could smartphone be used for programming in that case? The answer is yes but is it actual feasible? In this post we&amp;rsquo;ll focus on implementing a blog on a Android smartphone.
+I&amp;rsquo;ve been using my smartphone to play with C++, Go, Vim and practice UNIX programs like AWK and grep for quite some time now.</description>
+    </item>
+    
+    <item>
       <title>I&#39;m quitting cmd</title>
       <link>https://dskrzypiec.dev/quittingcmd/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
