@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on DSkrzypiec Blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Tags on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 24 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android</title>
       <link>https://dskrzypiec.dev/tags/android/</link>
@@ -30,6 +26,15 @@
     </item>
     
     <item>
+      <title>cmd</title>
+      <link>https://dskrzypiec.dev/tags/cmd/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/cmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>PowerShell</title>
       <link>https://dskrzypiec.dev/tags/powershell/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
@@ -44,15 +49,6 @@
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.dev/tags/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cmd</title>
-      <link>https://dskrzypiec.dev/tags/cmd/</link>
-      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dskrzypiec.dev/tags/cmd/</guid>
       <description></description>
     </item>
     

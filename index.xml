@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on DSkrzypiec Blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Home on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://dskrzypiec.dev/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Writing a blog on smartphone</title>
       <link>https://dskrzypiec.dev/smartphone/</link>
@@ -77,7 +73,7 @@ So what is a quantile? It&#39;s a one of most commonly used descriptive statisti
       
       <guid>https://dskrzypiec.dev/about/</guid>
       <description>About this blog Hi! I&amp;rsquo;m Damian Skrzypiec and this is my blog. I write mostly about mathematics and programming in general.
-About me I live in Warsaw in Poland. I&amp;rsquo;m math graduate but my main interest is programming and computer science. Currently my main language is Go alongside with C# and R. I also used to use Python and C++. I do like classical relational databases. I&amp;rsquo;m also interested in functional programming languages (F# currently).</description>
+About me I live in Warsaw in Poland. I&amp;rsquo;m math graduate but my main interest is programming and computer science. Currently my main language is Go alongside with C#. I like C++ a lot but unfortunately I didn&amp;rsquo;t work with it professionally. I use Python for scripting and R for stats and data mining.</description>
     </item>
     
   </channel>
