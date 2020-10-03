@@ -6,7 +6,16 @@
     <description>Recent content in Posts on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mocking a file system in Go</title>
+      <link>https://dskrzypiec.dev/mock-go-filesystem/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/mock-go-filesystem/</guid>
+      <description>src  config  config.go config_test.go reloader.go   dir  dir.go dir_test.go dirCompare.go dirCompare_test.go hash.go listener.go   loop  mainLoop.go   main.go   readme.md   Intro In this post we&amp;rsquo;ll try to mock some features of a file system in Go. We&amp;rsquo;ll focus mainly on file tree structure instead on IO operations on files itself. If you are interested in full abstract file system for Go check out afero package.</description>
+    </item>
+    
     <item>
       <title>Building a small form factor PC</title>
       <link>https://dskrzypiec.dev/minipc/</link>
