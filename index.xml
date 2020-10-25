@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Goodbye Całka</title>
+      <link>https://dskrzypiec.dev/calka/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/calka/</guid>
+      <description>Intro Last Saturday, 17th October 2020, Całka (one of my two cats) had to be put to sleep. Name Całka translates from Polish to English as Integral. I and my (at that time) girlfriend were maths undergrads when we&amp;rsquo;ve taken Całka from an animal shelter in early 2016. That probably explains the name.
+For the last two months, Całka fought with really nasty jaw bone cancer. It was growing fast. It was too big to even consider surgery.</description>
+    </item>
+    
+    <item>
       <title>Mocking a file system in Go</title>
       <link>https://dskrzypiec.dev/mock-go-filesystem/</link>
       <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
