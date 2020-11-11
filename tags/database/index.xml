@@ -6,7 +6,17 @@
     <description>Recent content in database on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Home Database</title>
+      <link>https://dskrzypiec.dev/home-db/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/home-db/</guid>
+      <description>Intro Last month after my daughter was born we&amp;rsquo;ve received a bunch of documents in this matter. Birth certificate, medical papers, assignment of PESEL, etc. When I was about to put those papers into document folders I thought it&amp;rsquo;s time for digitalization.
+Most of our very important documents like mortgage papers or university diplomas exist only in physical version without any copy either digital or physical. We had plans to scan or at least make photos of those but we didn&amp;rsquo;t do it.</description>
+    </item>
+    
     <item>
       <title>Go database/sql vs jmoiron/sqlx reading benchmark</title>
       <link>https://dskrzypiec.dev/gosqlstdsqlx/</link>
