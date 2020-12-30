@@ -3,22 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://dskrzypiec.dev/tags/annual-summary/</loc>
+    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dskrzypiec.dev/post/</loc>
+    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dskrzypiec.dev/year2020/</loc>
+    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dskrzypiec.dev/tags/</loc>
+    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dskrzypiec.dev/tags/database/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dskrzypiec.dev/home-db/</loc>
-    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dskrzypiec.dev/post/</loc>
-    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dskrzypiec.dev/tags/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url>
   

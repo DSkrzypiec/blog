@@ -6,7 +6,17 @@
     <description>Recent content in Posts on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Summary of 2020</title>
+      <link>https://dskrzypiec.dev/year2020/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/year2020/</guid>
+      <description>Intro Starting from this year on I&amp;rsquo;ll try to make a post per year with summary of my personal and professional important events within the year.
+2020 highlights  Finished application for a factoring company SARS-CoV-2 Changed team and position at work I&amp;rsquo;ve started learning Russian I&amp;rsquo;ve build a PC My daughter was born  Finished application for a factoring company In April 2020 I&amp;rsquo;ve finished working on the project for a factoring company.</description>
+    </item>
+    
     <item>
       <title>Home Database</title>
       <link>https://dskrzypiec.dev/home-db/</link>
@@ -33,7 +43,7 @@ For the last two months, Całka fought with really nasty jaw bone cancer. It was
       <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.dev/mock-go-filesystem/</guid>
-      <description>src  config  config.go config_test.go reloader.go   dir  dir.go dir_test.go dirCompare.go dirCompare_test.go hash.go listener.go   loop  mainLoop.go   main.go   readme.md  Intro In this post we&amp;rsquo;ll try to mock some features of a file system in Go. We&amp;rsquo;ll focus mainly on file tree structure instead on IO operations on files itself. If you are interested in full abstract file system for Go check out afero package.</description>
+      <description>src  config  config.go config_test.go reloader.go   dir  dir.go dir_test.go dirCompare.go dirCompare_test.go hash.go listener.go   loop  mainLoop.go   main.go   readme.md   Intro In this post we&amp;rsquo;ll try to mock some features of a file system in Go. We&amp;rsquo;ll focus mainly on file tree structure instead on IO operations on files itself. If you are interested in full abstract file system for Go check out afero package.</description>
     </item>
     
     <item>
