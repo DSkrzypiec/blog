@@ -6,7 +6,25 @@
     <description>Recent content in Tags on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.NET</title>
+      <link>https://dskrzypiec.dev/tags/.net/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C#</title>
+      <link>https://dskrzypiec.dev/tags/c#/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/c#/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Annual Summary</title>
       <link>https://dskrzypiec.dev/tags/annual-summary/</link>

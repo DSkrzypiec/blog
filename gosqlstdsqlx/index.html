@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.75.0" />
+  <meta name="generator" content="Hugo 0.82.0-DEV" />
   <link rel="canonical" href="https://dskrzypiec.dev/gosqlstdsqlx/">
 
   
@@ -395,10 +395,10 @@ functionalities from standard <code>database/sql</code> package.</p>
 
 <blockquote class="blockquote">
   <p>
-    sqlx is a library which provides a set of extensions on go&rsquo;s standard 
-<code>database/sql</code> library. The sqlx versions of <code>sql.DB</code>, <code>sql.TX</code>, <code>sql.Stmt</code>, et al. all 
-leave the underlying interfaces untouched, so that their interfaces are a 
-superset on the standard ones. This makes it relatively painless to integrate 
+    sqlx is a library which provides a set of extensions on go&rsquo;s standard
+<code>database/sql</code> library. The sqlx versions of <code>sql.DB</code>, <code>sql.TX</code>, <code>sql.Stmt</code>, et al. all
+leave the underlying interfaces untouched, so that their interfaces are a
+superset on the standard ones. This makes it relatively painless to integrate
 existing codebases using <code>database/sql</code> with sqlx.
     
       <br>
@@ -661,8 +661,7 @@ closer to 0 and variance decreases.</p>
 does more number of allocations. For reading <code>10 000</code> of rows benchmark
 statistics are displayed below:</p>
 
-<pre class="cmd"><code>
-go test -bench=. -benchtime=30s -benchmem</code></pre>
+<pre class="cmd"><code>go test -bench=. -benchtime=30s -benchmem</code></pre>
 
 
 

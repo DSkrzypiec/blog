@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.82.0-DEV" />
-  <link rel="canonical" href="https://dskrzypiec.dev/quantiles/">
+  <link rel="canonical" href="https://dskrzypiec.dev/tags/c#/">
 
   
 
@@ -32,7 +32,7 @@
 
   
   
-  <title>What the quantile really is? | DSkrzypiec Blog</title>
+  <title>C# | DSkrzypiec Blog</title>
 </head>
 
   <body>
@@ -166,7 +166,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/post/" aria-current="page">
+      <a href="https://dskrzypiec.dev/post/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -179,7 +179,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/tags/" >
+      <a href="https://dskrzypiec.dev/tags/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -208,276 +208,22 @@
         <div>
           
   <main id="main">
-    <h1>
-      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      What the quantile really is?
-    </h1>
-
-    <div class="date">
-      
-      
-      <strong aria-hidden="true">Publish date: </strong>Aug 23, 2019
-      
-        
-      
-    </div>
-
+    <h1>C#</h1>
+    <ul class="patterns-list">
     
-      <div class="tags">
-        <strong aria-hidden="true">Tags: </strong>
-        <ul aria-label="tags">
-          
-            <li>
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              
-              <a href="https://dskrzypiec.dev/tags/stats/">stats</a>
-            </li>
-          
-            <li>
-              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                <use xlink:href="#tag"></use>
-              </svg>
-              
-              <a href="https://dskrzypiec.dev/tags/go/">go</a>
-            </li>
-          
-        </ul>
-      </div>
-    
-    
-    
-      
-
-  <nav class="toc" aria-labelledby="toc-heading">
-    <h2 id="toc-heading">Table of contents</h2>
-    <ol>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#intro">
-            Intro
+      <li>
+        <h2>
+          <a href="https://dskrzypiec.dev/iterators/">
+            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Iterators in C#
           </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#a-bit-of-maths">
-            A bit of maths
-          </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#how-its-calculated">
-            How it&#39;s calculated?
-          </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#go-implementation">
-            Go implementation
-          </a>
-        </li>
-      
-        <li>
-          
-          
-          
-          
-          <a href="#summary">
-            Summary
-          </a>
-        </li>
-      
-    </ol>
-  </nav>
-
-
+        </h2>
+      </li>        
     
-
-    <h2 id="intro">Intro</h2>
-
-<p>For few years when I was practicing data science I've used
-quantiles a lot. I knew what it is and when one should use it. I knew mathematical
-definition and intuition around quantiles but if someone would ask me to
-implement it from scratch I wouldn't know how to do it right away.</p>
-
-<p>So what is a quantile? It's a one of most commonly used descriptive
-<a href="https://en.wikipedia.org/wiki/Statistic">statistic</a>. It gives us aggregated
-information about sample's distribution. For example let's say we have data sample
-representing salary of employees of some company. Quantile can gives us answer
-on question &quot;How much should I be paid to earn more then 90% of employees?&quot;.
-Let's assume we have a sample</p>
-
-<p><span  class="math">\[ S = \lbrace 140, 80, 70, 200, 100 \rbrace \]</span></p>
-
-<p>How would you answer the question for this sample? Probably by sorting salaries</p>
-
-<p><span  class="math">\[ 70, 80, 100, 140, 200 \]</span></p>
-
-<p>and the answer would be somewhere between <span  class="math">\(140\)</span> and <span  class="math">\(200\)</span>. But where?</p>
-
-<h2 id="a-bit-of-maths">A bit of maths</h2>
-
-<p>Formally if <span  class="math">\(X\)</span> is random variable with distribution <span  class="math">\(P\)</span> and <span  class="math">\(p \in \lbrack
-0, 1 \rbrack\)</span>, then <strong>p-quantile</strong> is value <span  class="math">\(x_p\)</span> of X which satisfy the
-following two inequalities</p>
-
-<p><span  class="math">\[
-P(X \le x_p) \ge p \\
-P(X \ge x_p) \ge 1 - p
-\]</span></p>
-
-<p>But in real-world (statistics) we often don't know the real form of CDF of given
-sample. More interesting question is &quot;how quantile is calculated?&quot;. At first it
-might not be obvious how one can implement quantile calculation just by looking
-at those formulas.</p>
-
-<h2 id="how-its-calculated">How it's calculated?</h2>
-
-<p>Statistics gives us an <em>estimator</em> for calculating quantile. This
-estimator also use <a href="https://en.wikipedia.org/wiki/Order_statistic">order statistics</a>
-of a sample. General form of p-quantile estimator <span  class="math">\(\hat{Q}(p)\)</span> which is used
-in statistical software is as follows</p>
-
-<p><span  class="math">\[
-\hat{Q}(p) = (1 - \gamma(p))X_{(j)} + \gamma(p) X_{(j+1)}
-\]</span></p>
-
-<p>where <span  class="math">\(X_{(j)}\)</span> is j-th order statistics of sample <span  class="math">\(x\)</span>, <span  class="math">\(0 \le \gamma(p) \le
-1\)</span> and</p>
-
-<p><span  class="math">\[
-\frac{j - m}{n} \le p \le \frac{j - m - 1}{n}
-\]</span></p>
-
-<p>where <span  class="math">\(n\)</span> is sample size.</p>
-
-<aside aria-label="note" class="note">
-  <div>
-    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
-      <use xlink:href="#info"></use>
-    </svg>
-    
-So this estimator is exactly the same as our intuition from the beginning. It
-is somewhere between j-th and (j+1)-th ordered elements. 
-
-  </div>
-</aside>
-
-<p><strong>But where exactly?</strong> As it turns out there is not a good answer. Obviously we
-need some kind of interpolation with property <span  class="math">\(Q(p) \ge Q(q)\)</span> if <span  class="math">\(p \ge q\)</span>.
-This interpolation is mainly needed for small samples. If in our case sample had
-size of <span  class="math">\(100\)</span> then <span  class="math">\(0.90\)</span> quantile would be 90-th sorted element of the
-sample but in our five elements sample we cannot give specific answer without
-interpolation.
-In paper <a href="https://www.amherst.edu/media/view/129116/original/Sample+Quantiles.pdf"><em>Sample Quantiles in Statistical
-Packages</em></a>
-by Rob T. Hyndman and Yanan Fan there is summary of nine methods of interpolation
-defined in various statistical software.</p>
-
-<p>Here we focus only on one specific method - default method from <strong>R</strong>
-programming language, from function <code>quantile</code> - <code>type = 7</code>. In this case
-<span  class="math">\(j = \lfloor p(n - 1) + 1 \rfloor\)</span> and function <span  class="math">\(\gamma(p)\)</span> is of the form</p>
-
-<p><span  class="math">\[
-\gamma(p) = p(n - 1) + 1 - \lfloor p(n - 1) + 1 \rfloor
-\]</span></p>
-
-<p>Now we can calculate 0.90-quantile of our five-element salaries sample - <span  class="math">\(n = 5\)</span> and
-<span  class="math">\(p = 0.9\)</span>. As we thought the answer lay somewhere between <span  class="math">\(140\)</span> and <span  class="math">\(200\)</span>
-now it is confirmed by above formulas - <span  class="math">\(j = \lfloor 0.9 \cdot 4 + 1 \rfloor =
-\lfloor 4.6 \rfloor = 4\)</span>. Furthermore <span  class="math">\( \gamma(0.9) = 4.6 - 4 = 0.6\)</span>. Finally
-we can compute</p>
-
-<p><span  class="math">\[
-\hat{Q}(0.9) = (1 - \gamma(0.9))X_{(4)} + \gamma(0.9)X_{(5)} = \\ 
-(1-0.6) \cdot 140 + 0.6 \cdot 200 = 176.0
-\]</span></p>
-
-<p>So using default R method for calculating quantile we should expected final
-result as <span  class="math">\(176\)</span>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">quantile</span>(x <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">200</span>), probs <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.90</span>)</code></pre></div>
-<p>Figure <code>1</code> presents how function <span  class="math">\(\gamma(p)\)</span> interpolates between sample points.
-One can observe that interpolation is linear between nodes. It seems like
-reasonable method of interpolation.</p>
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-09d3d8436355f7910f1c0e45fa5e252d">
-  <a href="https://dskrzypiec.dev/quantiles/SalaryQuantilePlot.jpg" class="img-link">
-    <img src="https://dskrzypiec.dev/quantiles/SalaryQuantilePlot_hu0fa22e0c3f018dee247f251e4075b3ac_267648_700x0_resize_q99_box.jpg">
-  </a>
-  <figcaption id="caption-09d3d8436355f7910f1c0e45fa5e252d">
-    Quantile plot for salaries sample to present how interpolation looks like in this case.
-  </figcaption>
-</figure>
-
-
-<h2 id="go-implementation">Go implementation</h2>
-
-<p>Origin of this post came from little task I gave to myself - implementing in go
-bootstrap test for mean equality from paper <em>An Introduction To The Bootstrap</em>
-by Bradley Efron and Robert Tibshirani - revolutionary paper in modern
-statistics. For this implementation I've needed quantile. There is
-<a href="https://github.com/gonum/gonum"><code>gonum</code></a> library in go for mathematical and
-statistical functionalities where one can find implemented quantile function.
-At that point I asked myself a question &quot;what the quantile really is?&quot;. I'm
-aware it's better to use already existing implementation but it was nice
-exercise, especially for someone with statistics or data science background.</p>
-
-<p>So I've recreated quantile calculation in go with the same type of interpolation that
-is used as default type in R. It can be found
-<a href="https://github.com/DSkrzypiec/statTest/blob/master/stat/Quantile.go">here</a>.</p>
-
-<h2 id="summary">Summary</h2>
-
-<p>In my opinion quantile is one of most frequently used statistic from set of
-descriptive statistics. A sequence of quantiles of a sample gives us quality
-information about its distribution. I hope now, at the end of this post, you
-have an idea how this statistic is calculated in details. In particular it is worth to
-remember that calculated quantile value may doesn't exists in the sample. Also
-in sample with outlier (e.g. <span  class="math">\(\lbrace 0.5, 1.25, 5.32, 3.54, 1321.50 \rbrace\)</span>)
-p-quantiles for p close to <span  class="math">\(1.0\)</span> would be artificial value. It's calculated as
-interpolation between one sample point and the outlier. In case when value of
-calculated quantile is &quot;weird&quot; now you know why.</p>
-
-<p>If your software uses some external library to calculates quantiles make sure
-to know which type of interpolation this implementation is using. In some corner
-cases it might be helpful.</p>
-
+    </ul>
   </main>
-  <div id="disqus-container">
-  
-</div>
-
 
           <footer role="contentinfo">
   <div>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.75.0" />
+  <meta name="generator" content="Hugo 0.82.0-DEV" />
   <link rel="canonical" href="https://dskrzypiec.dev/smartphone/">
 
   
@@ -259,10 +259,10 @@ better than my current laptop. Could smartphone be used for programming in that
 case? The answer is <em>yes</em> but is it actual feasible? In this post we&rsquo;ll focus on
 implementing a blog on a Android smartphone.</p>
 <p>I&rsquo;ve been using my smartphone to play with C++, Go, Vim and practice UNIX programs
-like AWK and grep for quite some time now. I feel safe when I can code on my 
-smartphone which is equivalent to be able to code anytime and everywhere. 
+like AWK and grep for quite some time now. I feel safe when I can code on my
+smartphone which is equivalent to be able to code anytime and everywhere.
 Recently I&rsquo;ve realized that I&rsquo;m using a tool written in Go to generate this
-blog and I have a Go compiler on my phone. So why not to try write a blog 
+blog and I have a Go compiler on my phone. So why not to try write a blog
 post on the phone? I did and it went better then I expected.</p>
 <h2 id="setup">Setup</h2>
 <p>My main development environment on Android phone is
@@ -284,8 +284,8 @@ its binary based on the source code.</p>
 cd hugo 
 go build -v
 </code></pre><p>Go compiler will fetch and compile all of required dependencies. For
-convenience add Hugo to your path. One way to do that is to add the 
-following line in your <code>.bashrc</code> file (on Termux you might have to 
+convenience add Hugo to your path. One way to do that is to add the
+following line in your <code>.bashrc</code> file (on Termux you might have to
 create <code>~/.bashrc</code>)</p>
 <pre><code>PATH=$PATH:~/your/path/to/hugo
 </code></pre><p>After extending your <code>PATH</code> you&rsquo;ll need to restart Termux or run

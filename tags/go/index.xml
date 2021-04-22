@@ -13,7 +13,7 @@
       <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.dev/mock-go-filesystem/</guid>
-      <description>src  config  config.go config_test.go reloader.go   dir  dir.go dir_test.go dirCompare.go dirCompare_test.go hash.go listener.go   loop  mainLoop.go   main.go   readme.md  Intro In this post we&amp;rsquo;ll try to mock some features of a file system in Go. We&amp;rsquo;ll focus mainly on file tree structure instead on IO operations on files itself. If you are interested in full abstract file system for Go check out afero package.</description>
+      <description>src  config  config.go config_test.go reloader.go   dir  dir.go dir_test.go dirCompare.go dirCompare_test.go hash.go listener.go   loop  mainLoop.go   main.go   readme.md   Intro In this post we&amp;rsquo;ll try to mock some features of a file system in Go. We&amp;rsquo;ll focus mainly on file tree structure instead on IO operations on files itself. If you are interested in full abstract file system for Go check out afero package.</description>
     </item>
     
     <item>
