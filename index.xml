@@ -6,7 +6,17 @@
     <description>Recent content in Home on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim sessions</title>
+      <link>https://dskrzypiec.dev/vimsessions/</link>
+      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/vimsessions/</guid>
+      <description>Intro I wanted to share with you my experience with Vim sessions. The concept and usage are really simple but I didn&amp;rsquo;t know about it for a long time using Vim. In a nutshell you can save current state of your Vim environment as a session. Once it&amp;rsquo;s saved it can be reopened.
+Have you ever been debugging (not necessarily in Vim) for few hours with bunch of files opened in particular order to wrap your head around the problem?</description>
+    </item>
+    
     <item>
       <title>Iterators in C#</title>
       <link>https://dskrzypiec.dev/iterators/</link>

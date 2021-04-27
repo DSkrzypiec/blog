@@ -6,10 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.82.0-DEV" />
-  <link rel="canonical" href="https://dskrzypiec.dev/">
+  <link rel="canonical" href="https://dskrzypiec.dev/vimsessions/">
 
-  
-    
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://dskrzypiec.dev/apple-touch-icon.png">
@@ -34,9 +32,7 @@
 
   
   
-    
-  
-  <title>DSkrzypiec Blog</title>
+  <title>Vim sessions | DSkrzypiec Blog</title>
 </head>
 
   <body>
@@ -157,7 +153,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/" aria-current="page">
+      <a href="https://dskrzypiec.dev/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -170,7 +166,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/post/" >
+      <a href="https://dskrzypiec.dev/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -212,26 +208,91 @@
         <div>
           
   <main id="main">
-    <h1>Home</h1>
-    <p>List of posts:</p>
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Vim sessions
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong aria-hidden="true">Publish date: </strong>Apr 27, 2021
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/vim/">vim</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <p><img src="vimSession.gif" alt="img"></p>
+<h1 id="intro">Intro</h1>
+<p>I wanted to share with you my experience with Vim sessions. The concept and
+usage are really simple but I didn&rsquo;t know about it for a long time using Vim.
+In a nutshell you can save current state of your Vim environment as a
+<em>session</em>. Once it&rsquo;s saved it can be reopened.</p>
+<p>Have you ever been debugging (not necessarily in Vim) for few hours with bunch of
+files opened in particular order to wrap your head around the problem? Finally
+you built up enough understanding to solve the bug and with relief you close
+those dozens of tabs and windows. Few months passes and another bug have
+occurred in this area. What now? In best case you <em>remember</em> logic and order of
+execution in this particular area from fixing a bug few months back and it&rsquo;s not
+a problem now. From my experience this is very rare case especially on large
+projects and more common case is that you start analyzing this area once again
+from the top. It might be a bit faster this time but still takes time and
+what most important takes a lot of brain power and focus.</p>
+<p>My answer to this are Vim sessions.</p>
+<h1 id="vim-sessions">Vim sessions</h1>
+<p>Creating a session is rather straightforward by using single ex command:</p>
+<pre><code>:mks[ession][!] sessionFileName.vim
+</code></pre><p>This command should be called at the moment when you want to capture your
+current vim state. Version with exclamation mark overrides given file.
+Sessions keeps track of many things but most important to me are</p>
 <ul>
-<li>[2021-04-27] <a href="https://dskrzypiec.dev/vimsessions/">Vim sessions</a></li>
-<li>[2021-04-22] <a href="https://dskrzypiec.dev/iterators/">Iterators in C#</a></li>
-<li>[2020-12-30] <a href="https://dskrzypiec.dev/year2020/">Summary of 2020</a></li>
-<li>[2020-11-11] <a href="https://dskrzypiec.dev/home-db/">Home DB</a></li>
-<li>[2020-10-25] <a href="https://dskrzypiec.dev/calka/">Goodbye Całka</a></li>
-<li>[2020-10-03] <a href="https://dskrzypiec.dev/mock-go-filesystem/">Mocking filesystem in Go</a></li>
-<li>[2020-09-25] <a href="https://dskrzypiec.dev/minipc/">Building a small form factor PC</a></li>
-<li>[2020-08-24] <a href="https://dskrzypiec.dev/smartphone/">Writing a blog on smartphone</a></li>
-<li>[2020-08-05] <a href="https://dskrzypiec.dev/quittingcmd/">I&rsquo;m quitting cmd</a></li>
-<li>[2019-10-11] <a href="https://dskrzypiec.dev/vimmovchallenge/">Vim movement challenge</a></li>
-<li>[2019-10-05] <a href="https://dskrzypiec.dev/favtechtalks/">My favorite tech talks</a></li>
-<li>[2019-09-05] <a href="https://dskrzypiec.dev/gosqlstdsqlx/">Go <em>database/sql</em> vs <em>github.com/jmoiron/sqlx</em> reading
-benchmark</a></li>
-<li>[2019-08-23] <a href="https://dskrzypiec.dev/quantiles/">What the quantile really is?</a></li>
+<li>Order of tabs and windows</li>
+<li>All mappings and macros</li>
+<li>Buffers</li>
 </ul>
+<p>More details can be found in <code>:help mks</code>.
+Vim session can be restored using <code>:source</code> ex command:</p>
+<pre><code>:so[urce] sessionFileName.vim
+</code></pre><p>Usually I have a single catalog per project with vim sessions. After a while on
+new project I can very fast recreate development or debug environment for
+particular areas of the project.</p>
+<p>The following screen cast presents example of loading saved session twice.</p>
+<p><a href="https://asciinema.org/a/E3S18mOqyrD74SdHhJAtjubVu"><img src="https://asciinema.org/a/E3S18mOqyrD74SdHhJAtjubVu.svg" alt="asciicast"></a></p>
+<h1 id="summary">Summary</h1>
+<p>Opening last session is a default in probably all IDEs nowadays but saving session
+to a file is no so common. For me it was a huge help, especially on a large
+projects. Keeping vim sessions saved let me power through the project in no
+time. I don&rsquo;t waste time to think about which files should I open, then find
+files and finally open. I just pick right session saved from my catalog and
+start from there. It seems like a little thing (and in fact it is) but it
+improved my daily workflow significantly.</p>
 
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           <footer role="contentinfo">
   <div>
