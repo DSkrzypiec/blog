@@ -6,7 +6,25 @@
     <description>Recent content in Tags on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>database</title>
+      <link>https://dskrzypiec.dev/tags/database/</link>
+      <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hardware</title>
+      <link>https://dskrzypiec.dev/tags/hardware/</link>
+      <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>vim</title>
       <link>https://dskrzypiec.dev/tags/vim/</link>
@@ -44,15 +62,6 @@
     </item>
     
     <item>
-      <title>database</title>
-      <link>https://dskrzypiec.dev/tags/database/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dskrzypiec.dev/tags/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Personal</title>
       <link>https://dskrzypiec.dev/tags/personal/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
@@ -67,15 +76,6 @@
       <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.dev/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hardware</title>
-      <link>https://dskrzypiec.dev/tags/hardware/</link>
-      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dskrzypiec.dev/tags/hardware/</guid>
       <description></description>
     </item>
     

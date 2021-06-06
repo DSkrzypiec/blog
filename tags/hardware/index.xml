@@ -6,7 +6,17 @@
     <description>Recent content in Hardware on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Home Server</title>
+      <link>https://dskrzypiec.dev/home-server/</link>
+      <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/home-server/</guid>
+      <description>Intro I&amp;rsquo;ve finally setup my own server. It&amp;rsquo;s great and I regret I haven&amp;rsquo;t done it earlier. This post will be about my thoughts and experiences on setting up a home server.
+In my case a server is just a Raspberry Pi 4B so it&amp;rsquo;s not a typical server with over 40 CPU cores and over 256 GB of RAM but technically it&amp;rsquo;s still a server and it&amp;rsquo;s enough for my use.</description>
+    </item>
+    
     <item>
       <title>Building a small form factor PC</title>
       <link>https://dskrzypiec.dev/minipc/</link>
