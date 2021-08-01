@@ -2,22 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dskrzypiec.dev/</loc>
+    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/leaving-pwc/</loc>
+    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/tags/personal/</loc>
+    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/post/</loc>
+    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/tags/</loc>
+    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dskrzypiec.dev/tags/database/</loc>
     <lastmod>2021-06-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/hardware/</loc>
     <lastmod>2021-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dskrzypiec.dev/</loc>
-    <lastmod>2021-06-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://dskrzypiec.dev/home-server/</loc>
-    <lastmod>2021-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/post/</loc>
-    <lastmod>2021-06-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/tags/</loc>
     <lastmod>2021-06-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/vim/</loc>
@@ -45,9 +51,6 @@
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/calka/</loc>
-    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/tags/personal/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/go/</loc>
