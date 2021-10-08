@@ -6,10 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.82.0-DEV" />
-  <link rel="canonical" href="https://dskrzypiec.dev/">
+  <link rel="canonical" href="https://dskrzypiec.dev/bloom-filter/">
 
-  
-    
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://dskrzypiec.dev/apple-touch-icon.png">
@@ -34,9 +32,7 @@
 
   
   
-    
-  
-  <title>DSkrzypiec Blog</title>
+  <title>Bloom filter | DSkrzypiec Blog</title>
 </head>
 
   <body>
@@ -157,7 +153,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/" aria-current="page">
+      <a href="https://dskrzypiec.dev/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -170,7 +166,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/post/" >
+      <a href="https://dskrzypiec.dev/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -212,29 +208,211 @@
         <div>
           
   <main id="main">
-    <h1>Home</h1>
-    <p>List of posts:</p>
-<ul>
-<li>[2021-10-08] <a href="https://dskrzypiec.dev/bloom-filter/">Bloom Filter</a></li>
-<li>[2021-08-01] <a href="https://dskrzypiec.dev/leaving-pwc/">Leaving PwC</a></li>
-<li>[2021-06-06] <a href="https://dskrzypiec.dev/home-server/">Home Server</a></li>
-<li>[2021-04-27] <a href="https://dskrzypiec.dev/vimsessions/">Vim sessions</a></li>
-<li>[2021-04-22] <a href="https://dskrzypiec.dev/iterators/">Iterators in C#</a></li>
-<li>[2020-12-30] <a href="https://dskrzypiec.dev/year2020/">Summary of 2020</a></li>
-<li>[2020-11-11] <a href="https://dskrzypiec.dev/home-db/">Home DB</a></li>
-<li>[2020-10-25] <a href="https://dskrzypiec.dev/calka/">Goodbye Całka</a></li>
-<li>[2020-10-03] <a href="https://dskrzypiec.dev/mock-go-filesystem/">Mocking filesystem in Go</a></li>
-<li>[2020-09-25] <a href="https://dskrzypiec.dev/minipc/">Building a small form factor PC</a></li>
-<li>[2020-08-24] <a href="https://dskrzypiec.dev/smartphone/">Writing a blog on smartphone</a></li>
-<li>[2020-08-05] <a href="https://dskrzypiec.dev/quittingcmd/">I&rsquo;m quitting cmd</a></li>
-<li>[2019-10-11] <a href="https://dskrzypiec.dev/vimmovchallenge/">Vim movement challenge</a></li>
-<li>[2019-10-05] <a href="https://dskrzypiec.dev/favtechtalks/">My favorite tech talks</a></li>
-<li>[2019-09-05] <a href="https://dskrzypiec.dev/gosqlstdsqlx/">Go <em>database/sql</em> vs <em>github.com/jmoiron/sqlx</em> reading
-benchmark</a></li>
-<li>[2019-08-23] <a href="https://dskrzypiec.dev/quantiles/">What the quantile really is?</a></li>
-</ul>
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Bloom filter
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong aria-hidden="true">Publish date: </strong>Oct 8, 2021
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/data-structures/">Data Structures</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/c/">C#</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="intro">Intro</h2>
+<p>At one of mine job interviews I was asked how would I check if there is a
+user name in continues stream of data without possibility of storing data on the
+disc. I had a good intuition but I didn&rsquo;t expected that probabilistic answer
+would be sufficient and I haven&rsquo;t ever heard about Bloom filters to that point.</p>
+<p>Bloom filter is a data structure. It exists to help answer the question &ldquo;Does
+this element (probably) exist in the set?&rdquo; or &ldquo;Does this element surely not
+exist in the set?&rdquo;. Especially when the search set is very large, because it is
+very space efficient. Also it is a probabilistic data structure - more about it
+later.</p>
+<p>I found this data structure very interesting. The main idea is brilliant.
+In this blog post I&rsquo;m sharing description of the Bloom filter, an algorithms of
+basic operations and finally some maths behind probabilistic nature of the
+filter.</p>
+<p>Often code expresses more then hundred words, therefore I&rsquo;ll decorate
+descriptions with C# code.</p>
+<h2 id="bloom-filter">Bloom filter</h2>
+<p>Basic Bloom filter implementation would be a data structure that satisfy the
+following contract</p>
+<pre><code>public interface IBloomFilter&lt;T&gt;
+{
+    void Add(T item);
+    bool ProbablyContains(T item);
+}
+</code></pre><p>Nothing fancy yet. One could easily write a wrapper for an array or hash set
+that would meet this interface. What is different with Bloom filter is that it
+can store much more data in the query set because it doesn&rsquo;t really store items
+itself. Just to clarify - if <code>ProbablyContains</code> method return <code>false</code> we know
+<strong>for sure</strong> that given <code>item</code> does not exists in the set. The probabilistic
+part lays in another case, then we can only say that it <strong>could</strong> be in the set
+but not certainly.</p>
+<p>How is it done? Let&rsquo;s take a look into the algorithm.</p>
+<h3 id="implementation">Implementation</h3>
+<p>Implementation starts from a bit (I&rsquo;ll use bytes in C# codes) array and a bunch
+of hash functions.</p>
+<pre><code>public class BloomFilter&lt;T&gt; : IBloomFilter&lt;T&gt;
+{
+    private byte[] _bitset;
+    private IList&lt;Func&lt;byte[], byte[]&gt;&gt; _hashFunctions;
+    ...
+}
+</code></pre><p>That&rsquo;s all regarding the state of Bloom filter. The filter is initially
+constructed with all elements of <code>_bitset</code> set to <code>0</code> but more about
+<code>BloomFilter&lt;T&gt;</code> constructor later, including size of <code>_bitset</code> and number of
+<code>_hashFunctions</code>.</p>
+<p>The essence of the algorithms lays in the implementation of <code>Add</code> and
+<code>ProbablyContains</code> methods.</p>
+<h4 id="add-method"><code>Add</code> method</h4>
+<p>For given <code>T item</code> method <code>Add</code> do the following:</p>
+<ol>
+<li>Calculate all hashes of <code>item</code> using hash functions from <code>_hashFunctions</code></li>
+<li>Transform calculated hashes into <code>_bitset</code> indices</li>
+<li>For obtained indices set values of <code>_bitset</code> to <code>1</code></li>
+</ol>
+<p>Basic C# version can be implemented as follows</p>
+<pre><code>public void Add(T item)
+{
+    var bytes = ObjectToByteArray(item);
+
+    for (var i = 0; i &lt; _hashFuncs.Count; i++) {
+        var idx = GetIdFromHash(_hashFuncs[i](bytes));
+
+        if (_bitset[idx] == 0) {
+            _bitset[idx] = 1;
+        }
+    }
+}
+
+</code></pre><p>OK, so we start from zeroed array and within another <code>Add</code>s more bits will be
+set to one. Ones are cumulated and couldn&rsquo;t be set to zero. At least in the
+original Bloom Filter version. In another words - we cannot delete items from
+the set.</p>
+<p>Adding elements seems to be rather trivial but on the other hand displays
+the main idea behind Bloom Filter. Instead of storing objects itself in the
+data structure we&rsquo;ll just flip few bits in constant-size-array based on
+the results of independent hash functions called on the object.</p>
+<h4 id="probablycontains-method"><code>ProbablyContains</code> method</h4>
+<p>For given <code>T item</code> method <code>ProbablyContains</code> do the following:</p>
+<ol>
+<li>Calculate all hashes of <code>item</code> using hash functions from <code>_hashFunctions</code></li>
+<li>Transform calculated hashes into <code>_bitset</code> indices</li>
+<li>If at least one value based on calculated indices is zero then <code>false</code> is
+returned and <code>true</code> otherwise</li>
+</ol>
+<p>C# version can looks like this</p>
+<pre><code>public bool ProbablyContains(T item)
+{
+    var bytes = ObjectToByteArray(item);
+
+    for (var i = 0; i &lt; _hashFuncs.Count; i++) {
+        var idx = GetIdFromHash(_hashFuncs[i](bytes));
+
+        if (_bitset[idx] == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+</code></pre><p>Once again an algorithm is straightforward but why does it work and why is it
+probabilistic?</p>
+<p>Let&rsquo;s focus on negative case. We&rsquo;ve calculated all of the hashes for given item
+and transformed those into indices. We found out that for one of indices value
+in <code>_bitset</code> is zero. This means that all elements that were added to Bloom
+Filter and all of their hashed-deduced indices never hit this spot. So this
+must be a new element. Therefore we have got proof by contradiction.</p>
+<p>On the other hand when all values of <code>_bitset</code> for hash-deduced indices are set
+to one we still cannot say for sure that given element exists in the Bloom
+Filter. Why is that? The most probable case for false-positive is when parts of
+hit bits were set based on <code>item_n</code> and the rest of the bits were set based on
+<code>item_m</code>. Still all required bits are ones but we cannot say that those bits
+were activated by single object.</p>
+<h2 id="maths">Maths</h2>
+<p>At this point we know why the answer is probabilistic but it&rsquo;s not merely
+enough. I&rsquo;d like to know what is the probability of false positive and how it
+is related with <code>_bitset</code> size. Let&rsquo;s find out.</p>
+<p>False positive in this context means that <code>ProbablyContains(x) == true</code> and <code>x</code>
+is not contained in the search set which is equivalent to the fact that at
+least one bit checked for <code>x</code> wasn&rsquo;t set to one by <code>x</code>.
+Using assumption about uniform distribution of hash functions and independence
+of hash function we can determine probability of described event</p>
+<p>$$ P(A) = \left( 1 - \frac{1}{m} \right)^{k}$$</p>
+<p>Where <code>A</code> is an event of that particular bit is not set to one by any of <code>k</code>
+hash functions and <code>m</code> is size of <code>_bitset</code>. Once again, by independence, event
+<code>B</code> which is the same as <code>A</code> but after <code>n</code> inserts can be expressed as</p>
+<p>$$ P(B) = \left( 1 - \frac{1}{m} \right)^{k \cdot n} $$</p>
+<p>Finally we can write approximation for a probability of false positives</p>
+<p>$$ P(FP) = \left( 1 - \left( 1 - \frac{1}{m} \right)^{m \cdot \frac{k \cdot n}{m}} \right)^{k} \approx
+\left( 1 - e^{-\frac{k \cdot n}{m}} \right)^{k}  $$</p>
+<p>The above approximation says that the probability of false positives</p>
+<ol>
+<li>decreases with growth of <code>_bitset</code> size</li>
+<li>increases with number of insertions</li>
+<li>decreases with number of hash functions, but requires more computations</li>
+</ol>
+<p>The probability function for false positives can be perceived as functions of
+<strong>k</strong> (number of hash functions) assuming that <strong>m</strong> and <strong>n</strong> are given
+constants. In this case we can easily calculate optimal number of hash
+functions by minimizing false positives function. It&rsquo;s a
+differentiable function so we can use standard methods from calculus.
+The number of hash functions that minimizes false positives is</p>
+<p>$$ k_{opt} = \frac{m}{n} \ln 2 $$</p>
+<p>That&rsquo;s cool! We can a priori choose number of hash functions by estimating
+<code>_bitset</code> size and number of insertions.</p>
+<h2 id="summary">Summary</h2>
+<p>There are <a href="https://www.dca.fee.unicamp.br/~chesteve/pubs/bloom-filter-ieee-survey-preprint.pdf">many variations</a>
+of Bloom filters including ones with deletion capibilities but the most
+fascinating to me was the original idea. Very clever usage of properties of
+hash functions to significantly reducees memory usage and disk reads.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.cs.princeton.edu/courses/archive/spr05/cos598E/bib/p422-bloom.pdf">Original paper</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bloom_filter">Wiki</a></li>
+<li><a href="https://github.com/dskrzypiec/bloom-filter">Basic implementation</a></li>
+<li><a href="https://www.dca.fee.unicamp.br/~chesteve/pubs/bloom-filter-ieee-survey-preprint.pdf">Variations of Bloom filters</a></li>
+</ol>
 
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           <footer role="contentinfo">
   <div>
