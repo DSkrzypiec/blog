@@ -6,7 +6,18 @@
     <description>Recent content in Posts on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Foundations</title>
+      <link>https://dskrzypiec.dev/foundations/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/foundations/</guid>
+      <description>Intro Foundations are important whatever you do. That was said by many. So why I&amp;rsquo;m writing about that? It&amp;rsquo;s because I&amp;rsquo;m worried about foundations situation in IT world.
+Foundations are by definition important, because all things built in given space dependents on it. I&amp;rsquo;ll try to describe why that matters in examples of fields that I&amp;rsquo;m interested in.
+I&amp;rsquo;ll say it at least twice - there is no shame to back to basics even on senior level of experience.</description>
+    </item>
+    
     <item>
       <title>Bloom filter</title>
       <link>https://dskrzypiec.dev/bloom-filter/</link>
