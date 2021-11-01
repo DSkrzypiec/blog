@@ -6,10 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.82.0-DEV" />
-  <link rel="canonical" href="https://dskrzypiec.dev/">
+  <link rel="canonical" href="https://dskrzypiec.dev/fuzzy-finder/">
 
-  
-    
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://dskrzypiec.dev/apple-touch-icon.png">
@@ -34,9 +32,7 @@
 
   
   
-    
-  
-  <title>DSkrzypiec Blog</title>
+  <title>Fuzzy Finder | DSkrzypiec Blog</title>
 </head>
 
   <body>
@@ -157,7 +153,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/" aria-current="page">
+      <a href="https://dskrzypiec.dev/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -170,7 +166,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/post/" >
+      <a href="https://dskrzypiec.dev/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -212,31 +208,132 @@
         <div>
           
   <main id="main">
-    <h1>Home</h1>
-    <p>List of posts:</p>
-<ul>
-<li>[2021-11-01] <a href="https://dskrzypiec.dev/fuzzy-finder/">Fuzzy Finder</a></li>
-<li>[2021-10-26] <a href="https://dskrzypiec.dev/foundations/">Foundations</a></li>
-<li>[2021-10-08] <a href="https://dskrzypiec.dev/bloom-filter/">Bloom Filter</a></li>
-<li>[2021-08-01] <a href="https://dskrzypiec.dev/leaving-pwc/">Leaving PwC</a></li>
-<li>[2021-06-06] <a href="https://dskrzypiec.dev/home-server/">Home Server</a></li>
-<li>[2021-04-27] <a href="https://dskrzypiec.dev/vimsessions/">Vim sessions</a></li>
-<li>[2021-04-22] <a href="https://dskrzypiec.dev/iterators/">Iterators in C#</a></li>
-<li>[2020-12-30] <a href="https://dskrzypiec.dev/year2020/">Summary of 2020</a></li>
-<li>[2020-11-11] <a href="https://dskrzypiec.dev/home-db/">Home DB</a></li>
-<li>[2020-10-25] <a href="https://dskrzypiec.dev/calka/">Goodbye Całka</a></li>
-<li>[2020-10-03] <a href="https://dskrzypiec.dev/mock-go-filesystem/">Mocking filesystem in Go</a></li>
-<li>[2020-09-25] <a href="https://dskrzypiec.dev/minipc/">Building a small form factor PC</a></li>
-<li>[2020-08-24] <a href="https://dskrzypiec.dev/smartphone/">Writing a blog on smartphone</a></li>
-<li>[2020-08-05] <a href="https://dskrzypiec.dev/quittingcmd/">I&rsquo;m quitting cmd</a></li>
-<li>[2019-10-11] <a href="https://dskrzypiec.dev/vimmovchallenge/">Vim movement challenge</a></li>
-<li>[2019-10-05] <a href="https://dskrzypiec.dev/favtechtalks/">My favorite tech talks</a></li>
-<li>[2019-09-05] <a href="https://dskrzypiec.dev/gosqlstdsqlx/">Go <em>database/sql</em> vs <em>github.com/jmoiron/sqlx</em> reading
-benchmark</a></li>
-<li>[2019-08-23] <a href="https://dskrzypiec.dev/quantiles/">What the quantile really is?</a></li>
-</ul>
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Fuzzy Finder
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong aria-hidden="true">Publish date: </strong>Nov 1, 2021
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/vim/">Vim</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <p><img src="top.png" alt="img"></p>
+<h2 id="intro">Intro</h2>
+<p>I&rsquo;ll start by stating that I don&rsquo;t like fuzziness. It&rsquo;s the main reason I
+didn&rsquo;t stick to machine learning and data science at the beginning of my
+career. Instead I&rsquo;ve transitioned to programming and data engineering.</p>
+<p>And here I am writing about <em>fuzzy</em> finder in Vim. That&rsquo;s because of
+<a href="https://github.com/junegunn/fzf.vim">fzf.vim</a> Vim package. It has some very
+convenient feature that I have been looking for. More on this later in the
+post. I still believe you should know (at least try to know) file tree
+structure of a project your working on. Fuzzy finders might pull you away from
+this practice very quickly. And I do think it&rsquo;s a bad idea.</p>
+<p>However let&rsquo;s assume you have a firm grasp of your project&rsquo;s structure tree but
+it&rsquo;s large project with very deep tree. In this case, when you know what you
+are looking for, it might saves you time for typing long file paths.</p>
+<p>Before I jump to <em>fzf.vim</em> package let&rsquo;s discuss <a href="https://github.com/junegunn/fzf">fzf</a>
+first.</p>
+<h2 id="_fzf_"><em>fzf</em></h2>
+<p>Fuzzy finders in general helps you to look for a file or directory, usually in
+an interactive manner, by just taking search phrases. They are usually search
+down the tree of files recursively beginning from current catalog.</p>
+<p>At I stated before I try to know the file tree. But in case I want to open file
+in <code>./this/very/deep/file/path/location/project/sub/MyFile.cs</code> it is really
+convenient to feed <code>MyFile</code> phrase to fuzzy finder to quickly go to that
+location.</p>
+<p>In case of <em>fzf</em> I mostly use two aliases which uses <em>fzf</em> to fuzzy find file
+and open it in Vim and the other one is for jumping to found directory.</p>
+<pre><code>alias vf='vim $(fzf --height 40%)'
+alias cdf='cd $(find . -type directory | fzf --height 60%)'
+</code></pre><p>A little demo of the those aliases:
+<a href="https://asciinema.org/a/hTYFpnEqIekVYmTV7c1xS9PCk"><img src="https://asciinema.org/a/hTYFpnEqIekVYmTV7c1xS9PCk.svg" alt="asciicast"></a></p>
+<h2 id="_fzfvim_"><em>fzf.vim</em></h2>
+<p>As the name suggests <em>fzf.vim</em> is a Vim package which wraps <em>fzf</em> in very comfy
+form. It takes advantage of Vim pop-up windows to run <em>fzf</em>. It can perform
+fuzzy search on files, git commits, Vim help, snippets and many more.
+But what was the most crucial feature for me was integration of <em>fzf</em> with
+<a href="https://github.com/BurntSushi/ripgrep">ripgrep</a>.</p>
+<p>For years I&rsquo;ve been using the following mapping for using grep while working in
+Vim (I used spaces instead of <code>&lt;space&gt;</code> for readability) to grep the word under
+the cursor</p>
+<pre><code>noremap &lt;leader&gt;f :!grep --color=always -iran &lt;C-r&gt;&lt;C-w&gt; .&lt;CR&gt;
+</code></pre><p>Once I&rsquo;ve glanced over the grep result I had to manually open the desired file.
+It was a bit tedious.</p>
+<p>Using <em>fzf.vim</em> I can use <code>:Rg</code> command to use <code>ripgrep</code> interactively and
+preview fragment of files for matched results. Because of great performance of
+both <em>ripgrep</em> and <em>fzf</em> browsing through results is extremely smooth.
+Once you find a result you can open it in new tab (<code>Ctrl + t</code>), new split
+(<code>Ctrl + x</code>) or vertical split (<code>Ctrl + v</code>).</p>
+<p>The following cast should express more than few paragraphs.</p>
+<p><a href="https://asciinema.org/a/9qVzlU7SRLzvipfivYANQjZB7"><img src="https://asciinema.org/a/9qVzlU7SRLzvipfivYANQjZB7.svg" alt="asciicast"></a></p>
+<p>There is one technical caveat in <code>:Rg</code> command. The ripgrep query is performed
+once at the beginning and all filters on results are done by <em>fzf</em>. Therefore
+you might think that using regular expressions doesn&rsquo;t work. Fortunately author
+gives <a href="https://github.com/junegunn/fzf.vim#example-advanced-ripgrep-integration">an
+example</a>
+how to fire up <em>ripgrep</em> on every query change. I have set this under <code>:RB</code>
+command.</p>
+<h2 id="my-settings">My settings</h2>
+<p>Make sure you have <em>fzf</em> and <em>ripgrep</em> installed before setting up Vim plugins.</p>
+<pre><code>Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+...
+
+let g:fzf_preview_window = ['down:40%', 'ctrl-/']
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --line-number --no-heading --color=always -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(&lt;q-args&gt;, &lt;bang&gt;0)
+</code></pre><h2 id="summary">Summary</h2>
+<p>In a very long time I have not been this excited about Vim plugin. Regular
+fuzzy finder for files via <em>fzf.vim</em> is a pleasant feature but if it would be
+the only feature of this plugin I would stick with standard Vim&rsquo;s <code>find</code>.</p>
+<p>But using this smooth usage of <em>ripgrep</em> inside Vim has really light a spark of
+joy for me. That is it. It is the main reason for this post.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://github.com/junegunn/fzf">fzf</a></li>
+<li><a href="https://github.com/junegunn/fzf.vim">fzf.vim</a></li>
+<li><a href="https://github.com/BurntSushi/ripgrep">ripgrep</a></li>
+</ol>
 
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           <footer role="contentinfo">
   <div>

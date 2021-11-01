@@ -6,7 +6,17 @@
     <description>Recent content in Posts on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fuzzy Finder</title>
+      <link>https://dskrzypiec.dev/fuzzy-finder/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/fuzzy-finder/</guid>
+      <description>Intro I&amp;rsquo;ll start by stating that I don&amp;rsquo;t like fuzziness. It&amp;rsquo;s the main reason I didn&amp;rsquo;t stick to machine learning and data science at the beginning of my career. Instead I&amp;rsquo;ve transitioned to programming and data engineering.
+And here I am writing about fuzzy finder in Vim. That&amp;rsquo;s because of fzf.vim Vim package. It has some very convenient feature that I have been looking for. More on this later in the post.</description>
+    </item>
+    
     <item>
       <title>Foundations</title>
       <link>https://dskrzypiec.dev/foundations/</link>
