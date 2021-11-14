@@ -6,7 +6,34 @@
     <description>Recent content in Tags on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C#</title>
+      <link>https://dskrzypiec.dev/tags/c#/</link>
+      <pubDate>Sun, 14 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/c#/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://dskrzypiec.dev/tags/database/</link>
+      <pubDate>Sun, 14 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>T-SQL</title>
+      <link>https://dskrzypiec.dev/tags/t-sql/</link>
+      <pubDate>Sun, 14 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/t-sql/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Vim</title>
       <link>https://dskrzypiec.dev/tags/vim/</link>
@@ -26,15 +53,6 @@
     </item>
     
     <item>
-      <title>C#</title>
-      <link>https://dskrzypiec.dev/tags/c#/</link>
-      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://dskrzypiec.dev/tags/c#/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Data Structures</title>
       <link>https://dskrzypiec.dev/tags/data-structures/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
@@ -49,15 +67,6 @@
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.dev/tags/personal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>database</title>
-      <link>https://dskrzypiec.dev/tags/database/</link>
-      <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://dskrzypiec.dev/tags/database/</guid>
       <description></description>
     </item>
     

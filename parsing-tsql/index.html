@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.82.0-DEV" />
-  <link rel="canonical" href="https://dskrzypiec.dev/tags/database/">
+  <link rel="canonical" href="https://dskrzypiec.dev/parsing-tsql/">
 
   
 
@@ -32,7 +32,7 @@
 
   
   
-  <title>database | DSkrzypiec Blog</title>
+  <title>Parsing T-SQL | DSkrzypiec Blog</title>
 </head>
 
   <body>
@@ -166,7 +166,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/post/" >
+      <a href="https://dskrzypiec.dev/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -179,7 +179,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/tags/" aria-current="page">
+      <a href="https://dskrzypiec.dev/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -208,55 +208,232 @@
         <div>
           
   <main id="main">
-    <h1>database</h1>
-    <ul class="patterns-list">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Parsing T-SQL
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong aria-hidden="true">Publish date: </strong>Nov 14, 2021
+      
+        
+      
+    </div>
+
     
-      <li>
-        <h2>
-          <a href="https://dskrzypiec.dev/parsing-tsql/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Parsing T-SQL
-          </a>
-        </h2>
-      </li>        
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/database/">Database</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/t-sql/">T-SQL</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/c/">C#</a>
+            </li>
+          
+        </ul>
+      </div>
     
-      <li>
-        <h2>
-          <a href="https://dskrzypiec.dev/home-server/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Home Server
-          </a>
-        </h2>
-      </li>        
     
-      <li>
-        <h2>
-          <a href="https://dskrzypiec.dev/home-db/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Home Database
-          </a>
-        </h2>
-      </li>        
     
-      <li>
-        <h2>
-          <a href="https://dskrzypiec.dev/gosqlstdsqlx/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Go database/sql vs jmoiron/sqlx reading benchmark
-          </a>
-        </h2>
-      </li>        
-    
-    </ul>
+
+    <p><img src="introPic.png" alt="img"></p>
+<h2 id="intro">Intro</h2>
+<p>Once I&rsquo;ve tried to implement auto formatter for T-SQL. To make this there seems to
+be two ways. The first and easier one is to implement sets of rules to
+transform text file without any context. The other one is to base on
+<a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> of T-SQL and use its
+context to apply formatting. The first case seems to be easier at the beginning
+and can be gradually extended but it&rsquo;s really hard and dirty to include all of
+the cases without the knowledge of the context. So I thought the right way is
+to use abstract syntax tree.</p>
+<h2 id="implementing-a-parser">Implementing a parser</h2>
+<p>Roughly about two years ago I couldn&rsquo;t find a library containing lexer and
+parser for T-SQL so I&rsquo;ve chosen to write my own parser of T-SQL. By the way, I
+haven&rsquo;t really write a parser ever before so I treated it as a nice opportunity
+to learn.</p>
+<p>The whole idea of creating code auto formatter came from Go language with such
+a tool. Obviously I looked into implementation of <a href="https://github.com/golang/go/blob/master/src/go/parser/parser.go">Go&rsquo;s
+parser</a>.</p>
+<p>I very liked this implementation, clean and simple. In similar way I&rsquo;ve
+implemented a lexer (scanner) and started to implement a parser.
+I&rsquo;ve wrapped around implementation of core mechanism but I didn&rsquo;t have enough
+motivation and time to implement fully-fledge parser for T-SQL. It has stalled and
+I have leaved the project behind.</p>
+<h2 id="oh-there-is-a-library">Oh, there is a library</h2>
+<p>Very recently I&rsquo;ve discovered
+<a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.sqlserver.transactsql.scriptdom?view=sql-dacfx-150">Microsoft.SqlServer.TransactSql.ScriptDom</a>
+library. Unfortunately it is no <strong>yet</strong> open source (on the publishing date)
+according to <a href="https://github.com/microsoft/sqltoolsservice/issues/973">this
+discussion</a>. You can
+find a NuGet package
+<a href="https://www.nuget.org/packages/Microsoft.SqlServer.TransactSql.ScriptDom">here</a>.</p>
+<p>The library contains functionality for parsing, transforming and generating AST
+of T-SQL. That sounds great. How come I haven&rsquo;t found it back 2 years ago? In
+my opinion it is not easy to find. It might be a bit easier after 2020 when
+<a href="https://devblogs.microsoft.com/azure-sql/programmatically-parsing-transact-sql-t-sql-with-the-scriptdom-parser">this blog post</a>
+was written.</p>
+<p>The API of the library is pretty convenient. The basic example of use to get an
+AST based on given SQL script path goes as follows</p>
+<pre><code>using (TextReader str = new StreamReader(sqlFilePath)) {
+    var parser = new TSql150Parser(true, SqlEngineType.All);
+    var tree = parser.Parse(str, out var errors);
+    ...
+}
+</code></pre><p>An AST is in form of <code>TSqlFragment</code>. In order to traverse the parsed AST
+<a href="https://en.wikipedia.org/wiki/Visitor_pattern">visitor pattern</a> can be used
+via <code>TSqlFragment.Accept</code> method. In order to do that one have to implement a
+class which inherits from <code>TSqlFragmentVisitor</code>. It has many overloads (2005 in
+total) for <code>ExplicitVisit</code> and <code>Visit</code> methods for different nodes of AST.</p>
+<pre><code>public abstract class TSqlFragmentVisitor
+{
+    protected TSqlFragmentVisitor();
+
+    public virtual void ExplicitVisit(FederationScheme node);
+    public virtual void ExplicitVisit(CreateTableStatement node);
+    public virtual void ExplicitVisit(ConstraintDefinition node);
+    public virtual void ExplicitVisit(ColumnStorageOptions node);
+    ... // 2005 overloads for two different methods of different type of nodes
+    public virtual void Visit(ExecuteInsertSource node);
+    public virtual void Visit(AlterDatabaseAddFileGroupStatement node);
+}
+</code></pre><p>As example let&rsquo;s take a look for visitor which finds all <code>DROP TABLE</code>
+statements and prints a warning. In this case <code>MyVisitor</code> would looks like the
+following</p>
+<pre><code>public class MyVisitor : TSqlFragmentVisitor {
+    public override void ExplicitVisit(DropTableStatement stm) {
+        var objects = stm.Objects;
+        if (objects.Count &gt; 0) {
+            foreach (var obj in objects) {
+                var msg = $&quot;You try to DROP {obj.BaseIdentifier.Value} &quot; +
+                    $&quot;in line: {obj.StartLine} col: {obj.StartColumn}&quot;;
+                Console.WriteLine(msg);
+            }
+        }
+        base.ExplicitVisit(stm);
+    }
+}
+</code></pre><p>Finally it can be applied via <code>Accept</code> method.</p>
+<pre><code>using (TextReader str = new StreamReader(sqlFilePath)) {
+    var parser = new TSql150Parser(true, SqlEngineType.All);
+    var tree = parser.Parse(str, out var errors);
+    tree.Accept(new MyVisitor());
+}
+</code></pre><p>Full running example can be found
+<a href="https://github.com/DSkrzypiec/blogSourceCodes/tree/master/202111_ParsingTSQL/sqlParser">here</a>.</p>
+<p>Another simple and really easy example of using T-SQL parser is
+<a href="https://michaeljswart.com/2014/04/removing-comments-from-sql">this example</a>
+for removing all comments from T-SQL script.</p>
+<h2 id="antlr">ANTLR</h2>
+<p><a href="https://www.antlr.org">ANTLR</a> is a tool for generating parsers. As it turned
+out there is already open source, community-built, grammar for T-SQL. Definition
+can be found <a href="https://github.com/antlr/grammars-v4/tree/master/sql/tsql">here</a>.</p>
+<p>Based on this grammar definition ANTLR would generate a lexer, parser and
+listeners in a target language. Supported target languages for ANTLR4 are Java
+(ANTLR is written in Java), C#, Python, JavaScript, Go, C++, Swift, PHP and
+Dart.</p>
+<p>I wanted to try it mostly because it&rsquo;s open source and I browse through the
+grammar and make some changes (improvements). Another reason is that if this
+would went smooth I could write up a grammar for
+<a href="https://docs.snowflake.com/en/">Snowflake SQL</a> which I use at work recently.</p>
+<p>I&rsquo;ve copied <code>TSqlLexer.g4</code> and <code>TSqlParser.g4</code> files and use ANTLR4 to generate
+set of C# classes using the following command (assuming you have ANTLR4
+installed)</p>
+<pre><code>antlr4 -Dlanguage=CSharp TSqlLexer.g4 TSqlParser.g4 -o tmp
+</code></pre><p>It has generated the following files in the <code>tmp</code> catalog</p>
+<ul>
+<li><code>TSqlLexer.cs</code> - a file with <code>TSqlLexer</code> class definition in 9775 lines of code</li>
+<li><code>TSqlParser.cs</code> - a file with <code>TSqlParser</code> class definition in 130774 lines of code</li>
+<li><code>TSqlParserListener.cs</code> - a file with <code>TSqlParserListener</code> class definition in 5787 lines of code</li>
+<li><code>TSqlParserBaseListener.cs</code> - a file with <code>TSqlParserBaseListener</code> class definition in 6943 lines of code.</li>
+</ul>
+<p><code>TSqlParserBaseListener</code> fill empty implementations of <code>TSqlParserListener</code> abstract methods.</p>
+<p>In order to actually use those generated C# classes in your project you need
+one more thing -
+<a href="https://www.nuget.org/packages/Antlr4.Runtime.Standard">Antlr.Runtime</a> library.</p>
+<p>The basic example of using this ANTLR4-generated parser can looks like this</p>
+<pre><code>using (TextReader str = new StreamReader(sqlFilePath)) {
+    var lexer = new TSqlLexer(new AntlrInputStream(str));
+    var tokenStream = new CommonTokenStream(lexer);
+    var parser = new TSqlParser(tokenStream);
+    var tree = parser.tsql_file();
+    ...
+}
+</code></pre><p>In order to write up a listener for an AST you have to implement a class which
+inherits by <code>TSqlParserBaseListener</code> like this</p>
+<pre><code>public class MyParserListener : TSqlParserBaseListener {
+    public override void ExitDrop_table(TSqlParser.Drop_tableContext context) {
+        var idNames = context
+                        .table_name()
+                        .id_()
+                        .Select(e =&gt; e.GetText());
+        var msg = $&quot;You're trying to delete {string.Join(&quot;.&quot;, idNames)}&quot;;
+        Console.WriteLine(msg);
+    }
+}
+</code></pre><p>Once you&rsquo;ve got it you can apply it using <code>ParserTreeWalker</code></p>
+<pre><code>...
+var ml = new MyParserListener();
+ParseTreeWalker.Default.Walk(ml, tree);
+</code></pre><p>The full running example can be found
+<a href="https://github.com/DSkrzypiec/blogSourceCodes/tree/master/202111_ParsingTSQL/antlrTsqlParser">here</a>.</p>
+<p>I should add that there is no guarantee for the correctness of this unofficial
+T-SQL grammar. Even in case of <code>DROP TABLE</code> statement which I&rsquo;ve presented here
+there is a difference with actual SQL Server specs.
+It suppose to be</p>
+<pre><code>DROP TABLE [ IF EXISTS ] { full_name | schema.table | table } [ ,...n ]
+[ ; ]
+</code></pre><p>which means that there might be many tables listed after <code>DROP TABLE</code> keywords
+seperated by comma but in the open source version there is only single table
+allowed:</p>
+<pre><code>drop_table
+    : DROP TABLE (IF EXISTS)? table_name ';'?
+    ;
+</code></pre><h2 id="summary">Summary</h2>
+<p>In my opinion having a parser for query (and other) languages might be an
+extremly useful tool, especially if you&rsquo;re a data engineer. Based on AST you
+can implement static analyzers, verifiers, validators, fixers and others.</p>
+<p>In term of T-SQL I&rsquo;d go with official Microsoft library. On the other hand if
+there is no official parser it would be much easier to define a grammer and
+generate parser with ANTLR than writing a parser from scratch.</p>
+<p>I&rsquo;ll defenetly play around with ANTLR, probably with Snowflake SQL for which I
+didn&rsquo;t find defined grammer. It also might be a very good excercise to go
+through the whole documentation.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://github.com/DSkrzypiec/mssfmt">github.com/DSkrzypiec/mssfmt</a></li>
+<li><a href="https://www.dbdelta.com/microsoft-sql-server-script-dom/">Microsoft SQL Server Script DOM</a></li>
+<li><a href="https://devblogs.microsoft.com/azure-sql/programmatically-parsing-transact-sql-t-sql-with-the-scriptdom-parser/">Another Microsoft blog post</a></li>
+<li><a href="https://tomassetti.me/getting-started-with-antlr-in-csharp">Getting started with ANTLR in C#</a></li>
+</ol>
+
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           <footer role="contentinfo">
   <div>
