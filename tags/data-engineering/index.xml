@@ -6,7 +6,16 @@
     <description>Recent content in Data engineering on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Copying data between distributed systems</title>
+      <link>https://dskrzypiec.dev/copying-data/</link>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/copying-data/</guid>
+      <description>Intro Transforming data from one form into another is the primary task of every programmer. For data engineers very common task is to move or copy data between two or more data sources with ETL or ELT processes. Usually implementation of those processes are very high level. Glueing few libraries into a script, or some operators into a DAG in Python. Although not always. There are more interesting cases. Recently I&amp;rsquo;ve had one and I wanted to write a bit about this particular problem and possible solutions.</description>
+    </item>
+    
     <item>
       <title>AWK - forgotten data engineering tool</title>
       <link>https://dskrzypiec.dev/awk/</link>
