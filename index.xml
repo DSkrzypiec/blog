@@ -6,7 +6,17 @@
     <description>Recent content in Home on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First thoughts on Scala</title>
+      <link>https://dskrzypiec.dev/scala/</link>
+      <pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/scala/</guid>
+      <description>Intro This post is about my first thoughts on Scala programming language. There is a great chance that I&amp;rsquo;ll be using Scala in the upcoming months, so I&amp;rsquo;ve read Programming in Scala in the last couple of days. Besides reading a book I also watched a bunch presentations and tutorials on YouTube and write few simple programs as an exercise.
+Scala is the most similar to F# from all programming languages I know.</description>
+    </item>
+    
     <item>
       <title>Copying data between distributed systems</title>
       <link>https://dskrzypiec.dev/copying-data/</link>
