@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL on DSkrzypiec Blog</title>
+    <link>https://dskrzypiec.dev/tags/sql/</link>
+    <description>Recent content in SQL on DSkrzypiec Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing SQLite parser in Scala</title>
+      <link>https://dskrzypiec.dev/sqlite-parser/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/sqlite-parser/</guid>
+      <description>Intro About a year ago I&amp;rsquo;ve played a bit with parsing T-SQL. At the time I&amp;rsquo;ve used Microsoft library and ANTLR for generating lexer and parser based on predefined T-SQL grammar. Recently I&amp;rsquo;ve come back to this topic. I&amp;rsquo;ve implemented SQLite parser almost from scratch (without code generation).
+&amp;hellip;, but why? In general I wanted to have a SQL parser in order to build some kind of static analyzer tool for SQL and databases.</description>
+    </item>
+    
+  </channel>
+</rss>
