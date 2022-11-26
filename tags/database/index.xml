@@ -6,7 +6,17 @@
     <description>Recent content in database on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Home App v2 - rewritten in Go</title>
+      <link>https://dskrzypiec.dev/home-app-go/</link>
+      <pubDate>Sat, 26 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/home-app-go/</guid>
+      <description>Intro Two years ago I&amp;rsquo;ve introduced Home Database with corresponding Home App written in ASP.NET Core MVC (C#). The original idea was to have a database for keeping very personal documents and other data related to me, my home and my family. More about motivations can be found in the linked post about Home Database.
+In case if you want to explore dev version of Home App before reading this post, you can visit</description>
+    </item>
+    
     <item>
       <title>Implementing SQLite parser in Scala</title>
       <link>https://dskrzypiec.dev/sqlite-parser/</link>

@@ -3,24 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dskrzypiec.dev/tags/database/</loc>
-    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/tags/go/</loc>
+    <lastmod>2022-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/</loc>
-    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dskrzypiec.dev/sqlite-parser/</loc>
-    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+    <loc>https://dskrzypiec.dev/home-app-go/</loc>
+    <lastmod>2022-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/post/</loc>
+    <lastmod>2022-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/tags/</loc>
+    <lastmod>2022-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/sqlite-parser/</loc>
     <lastmod>2022-10-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/scala/</loc>
     <lastmod>2022-10-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/sql/</loc>
-    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/tags/</loc>
     <lastmod>2022-10-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/allegropay/</loc>
@@ -103,9 +109,6 @@
   </url><url>
     <loc>https://dskrzypiec.dev/calka/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/tags/go/</loc>
-    <lastmod>2020-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/mock-go-filesystem/</loc>
     <lastmod>2020-10-03T00:00:00+00:00</lastmod>
