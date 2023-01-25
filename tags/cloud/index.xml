@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud on DSkrzypiec Blog</title>
+    <link>https://dskrzypiec.dev/tags/cloud/</link>
+    <description>Recent content in Cloud on DSkrzypiec Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implicit is great util it isn&#39;t - AWS CDK example</title>
+      <link>https://dskrzypiec.dev/aws-cdk-implicit/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/aws-cdk-implicit/</guid>
+      <description>Intro I&amp;rsquo;d like to start this post from praising AWS Cloud Development Kit (AWS CDK). In my opinion it&amp;rsquo;s great! It&amp;rsquo;s available in number of languages including Typescript, Go and Python. It has very good documentation including examples and most common use cases.
+If you&amp;rsquo;re not familiar with AWS CDK, I&amp;rsquo;d say it&amp;rsquo;s a library (or set of libraries) defining every service and its objects (constructs) on AWS. It&amp;rsquo;s obviously used to define infrastructure-as-a-code but it has strong advantages on other template-based formats.</description>
+    </item>
+    
+  </channel>
+</rss>
