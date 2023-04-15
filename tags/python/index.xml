@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on DSkrzypiec Blog</title>
+    <link>https://dskrzypiec.dev/tags/python/</link>
+    <description>Recent content in python on DSkrzypiec Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Polars - modern data frame library</title>
+      <link>https://dskrzypiec.dev/polars/</link>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/polars/</guid>
+      <description>Intro Almost five years passed since last time I&amp;rsquo;ve extensively used data frame library to calculate things. I sort of switched from analyzing data and building application around that to more &amp;ldquo;regular&amp;rdquo; programming and data engineering. I sometimes still use data.table in R or pandas in Python for ad-hoc analysis but nowadays I rarely need to do it. For completeness I should add that data frame library is a software library that support operations on data frames which are some kind of tables, usually kept in memory used for data analysis.</description>
+    </item>
+    
+  </channel>
+</rss>

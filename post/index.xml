@@ -6,7 +6,16 @@
     <description>Recent content in Posts on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Polars - modern data frame library</title>
+      <link>https://dskrzypiec.dev/polars/</link>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/polars/</guid>
+      <description>Intro Almost five years passed since last time I&amp;rsquo;ve extensively used data frame library to calculate things. I sort of switched from analyzing data and building application around that to more &amp;ldquo;regular&amp;rdquo; programming and data engineering. I sometimes still use data.table in R or pandas in Python for ad-hoc analysis but nowadays I rarely need to do it. For completeness I should add that data frame library is a software library that support operations on data frames which are some kind of tables, usually kept in memory used for data analysis.</description>
+    </item>
+    
     <item>
       <title>Implicit is great util it isn&#39;t - AWS CDK example</title>
       <link>https://dskrzypiec.dev/aws-cdk-implicit/</link>

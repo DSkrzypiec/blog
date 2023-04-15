@@ -25,11 +25,6 @@
             top: -20px;
         }
 
-        .header-left .sshcv {
-            position: relative;
-            top: -10px;
-        }
-
         .position-info p {
             color: #6F6967;
         }
@@ -120,10 +115,6 @@
             }
 
             .conf-talk-info:hover {
-                background-color: #F7F7E4;
-            }
-
-            .certificates-list:hover {
                 background-color: #F7F7E4;
             }
 
@@ -315,21 +306,6 @@
                 grid-row: 20 / 20;
                 grid-column: 2 / 2;
             }
-
-            .other-section {
-                grid-row: 21 / 21;
-                grid-column: 1 / span 2;
-            }
-
-            .certificates {
-                grid-row: 22 / 22;
-                grid-column: 1 / 1;
-            }
-
-            .certificates-list {
-                grid-row: 22 / 22;
-                grid-column: 2 / 2;
-            }
         }
     </style>
 
@@ -344,9 +320,6 @@
             <div class="www">
                 <a href="https://dskrzypiec.dev">dskrzypiec.dev</a>
             </div>
-            <div class="sshcv">
-                <span class="tech">ssh -p 2222 cv.dskrzypiec.dev</span>
-            </div>
         </div>
         <div class="header-right">
             <h2>Damian Skrzypiec</h2>
@@ -360,7 +333,7 @@
             <div class="title"><h3>Senior Data Engineer</h3></div>
             <div class="firm"><p>TCL Research Europe</p></div>
             <div class="team"><p>Cloud Team</p></div>
-            <div class="date-range"><p>08.2022 - 01.2023</p></div>
+            <div class="date-range"><p>08.2022 - <span class="tech">$current_date</span></p></div>
         </div>
         <div class="tasks-info tasks-tcl-sde">
             <ul class="top-level-ul">
@@ -469,11 +442,11 @@
             <ul class="top-level-ul">
                 <li>Maintenance and development of an IFRS 9 application for an international bank</li>
                     <ul>
-                        <li>Implementation of new features on the backend
+                        <li>implementation of new features on the backend
                             (<span class="tech">C#</span> and <span class="tech">SQL Server</span>)</li>
-                        <li>Improvement of the key processes of the application</li>
-                        <li>Development of end-to-end tests</li>
-                        <li>Development of CI/CD processes
+                        <li>improvement of the key processes of the application</li>
+                        <li>development of end-to-end tests</li>
+                        <li>development of CI/CD processes
                             (<span class="tech">TeamCity</span> and <span class="tech">Octopus</span>)</li>
                     </ul>
                 <li>Implementation of <span class="tech">.NET Core</span> backend prototypes for web apps</li>
@@ -491,15 +464,15 @@
             <ul class="top-level-ul">
                 <li>Design and implementation of an application for credit risk models validation</li>
                     <ul>
-                        <li>Designing the application database schema (<span class="tech">SQL Server</span>)</li>
-                        <li>Backend implementation (<span class="tech">HTTP</span> server in <span class="tech">Go</span>)</li>
-                        <li>Communication with analytic layer (<span class="tech">R</span>) and the frontend (</span>Angular</span>)</li>
+                        <li>designing the application database schema (<span class="tech">SQL Server</span>)</li>
+                        <li>backend implementation (<span class="tech">HTTP</span> server in <span class="tech">Go</span>)</li>
+                        <li>communication with analytic layer (<span class="tech">R</span>) and the frontend (</span>Angular</span>)</li>
                     </ul>
                 <li>Design and implementation of an IFRS 9 application for a factoring company</li>
                     <ul>
-                        <li>Managing a four-people team</li>
-                        <li>Designing the database (<span class="tech">SQLite</span>)</li>
-                        <li>Implementation of estimation, calculation and reporting layer</li>
+                        <li>managing a four-people team</li>
+                        <li>designing the database (<span class="tech">SQLite</span>)</li>
+                        <li>implementation of estimation, calculation and reporting layer</li>
                     </ul>
                 <li>Design and implementation of tools (<span class="tech">R</span>) for building behavioral models in market risk</li>
                 <li>Internal workshops - <span class="tech">Go</span> language (8h)</li>
@@ -518,9 +491,9 @@
                 <li>Implementation of automation estimation of parameters for credit risk models</li>
                 <li>Implementation of calculation stress tests for expected credit loss</li>
                     <ul>
-                        <li>Designing the database schema (<span class="tech">SQL Server</span>)</li>
-                        <li>High performance calculation engine in <span class="tech">Go</span></li>
-                        <li>Communication with analytical layer (<span class="tech">R</span>)</li>
+                        <li>designing the database schema (<span class="tech">SQL Server</span>)</li>
+                        <li>high performance calculation engine in <span class="tech">Go</span></li>
+                        <li>communication with analytical layer (<span class="tech">R</span>)</li>
                     </ul>
                 <li>Testing (unit and end-to-end) monolith IFRS 9 (<span class="tech">C#</span>) application</li>
                 <li>Internal workshops - <span class="tech">git</span> (2h), <span class="tech">R</span> (20h)
@@ -561,7 +534,7 @@
         </div>
 
         <div class="position-info pos-education">
-            <div class="major"><h3>Mathematics</h3></div>
+            <div class="major"><h3>MATHEMATICS</h3></div>
             <div class="university"><p>Warsaw University</p></div>
             <div class="education-date-range"><p>2011 - 2017</p></div>
         </div>
@@ -577,7 +550,7 @@
         </div>
 
         <div class="adv-skills skill-level">
-            <h3>Advanced</h3>
+            <h3>ADVANCED</h3>
         </div>
 
         <div class="adv-skills-list skills-list">
@@ -587,7 +560,7 @@
         </div>
 
         <div class="mid-skills skill-level">
-            <h3>Intermediate</h3>
+            <h3>INTERMEDIATE</h3>
         </div>
 
         <div class="mid-skills-list skills-list">
@@ -598,7 +571,7 @@
         </div>
 
         <div class="hobby-skills skill-level">
-            <h3>Hobby</h3>
+            <h3>HOBBY</h3>
         </div>
 
         <div class="hobby-skills-list skills-list">
@@ -627,21 +600,6 @@
         <div class="conf-talk-info erka-talk">
             <ul class="top-level-ul">
                 <li>Presentation "Reporting automation in R" - <span class="tech">github.com/DSkrzypiec/ReportGenerator</span></li>
-            </ul>
-        </div>
-
-
-        <div class="section other-section">
-            <p><span>OTHER</span></p>
-        </div>
-
-        <div class="certificates">
-            <h3>Certificates</h3>
-        </div>
-
-        <div class="certificates-list">
-            <ul>
-                <li>AWS Certified Solutions Architect - Associate (7EV5SPJCSNF1Q8WT)</li>
             </ul>
         </div>
     </div>
