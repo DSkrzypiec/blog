@@ -3,24 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dskrzypiec.dev/tags/data/</loc>
-    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/tags/file-format/</loc>
+    <lastmod>2023-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/</loc>
-    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/polars/</loc>
-    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/post/</loc>
+    <lastmod>2023-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/tags/</loc>
+    <lastmod>2023-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/parquet/</loc>
+    <lastmod>2023-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/polars/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/python/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/rust/</loc>
-    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/tags/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/aws/</loc>
