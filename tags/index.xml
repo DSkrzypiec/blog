@@ -6,22 +6,31 @@
     <description>Recent content in Tags on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AST</title>
-      <link>https://dskrzypiec.dev/tags/ast/</link>
-      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
+      <title>General</title>
+      <link>https://dskrzypiec.dev/tags/general/</link>
+      <pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://dskrzypiec.dev/tags/ast/</guid>
+      <guid>https://dskrzypiec.dev/tags/general/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
       <link>https://dskrzypiec.dev/tags/go/</link>
-      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.dev/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AST</title>
+      <link>https://dskrzypiec.dev/tags/ast/</link>
+      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/tags/ast/</guid>
       <description></description>
     </item>
     
@@ -175,15 +184,6 @@
       <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.dev/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>General</title>
-      <link>https://dskrzypiec.dev/tags/general/</link>
-      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://dskrzypiec.dev/tags/general/</guid>
       <description></description>
     </item>
     

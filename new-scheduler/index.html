@@ -6,10 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.82.0-DEV" />
-  <link rel="canonical" href="https://dskrzypiec.dev/">
+  <link rel="canonical" href="https://dskrzypiec.dev/new-scheduler/">
 
-  
-    
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://dskrzypiec.dev/apple-touch-icon.png">
@@ -34,9 +32,7 @@
 
   
   
-    
-  
-  <title>DSkrzypiec Blog</title>
+  <title>New Scheduler | DSkrzypiec Blog</title>
 </head>
 
   <body>
@@ -157,7 +153,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/" aria-current="page">
+      <a href="https://dskrzypiec.dev/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -170,7 +166,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/post/" >
+      <a href="https://dskrzypiec.dev/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -225,45 +221,158 @@
         <div>
           
   <main id="main">
-    <h1>Home</h1>
-    <h2 id="list-of-posts">List of posts:</h2>
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      New Scheduler
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong aria-hidden="true">Publish date: </strong>Dec 23, 2023
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/general/">General</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/go/">Go</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="intro">Intro</h2>
+<p>I&rsquo;ve started implementing yet another DAG scheduler, something like <a href="https://airflow.apache.org">Airflow</a> or
+<a href="https://github.com/spotify/luigi">Luigi</a>. This post is going to be on why I&rsquo;m doing this and what I&rsquo;m trying to
+achieve.</p>
+<p>Before we start, let me do a short introduction to schedulers, in case you&rsquo;ve never heard about it or use it yourself.
+What in here I&rsquo;m calling <em>scheduler</em> is a program or software system which is responsible for scheduling execution of
+tasks or another programs in particular order. That software can be also responsible for executing tasks, but the
+emphasis is placed on scheduling and keeping track of all dependencies, its statuses and so on.</p>
+<p>One of the first such programs was <a href="https://man7.org/linux/man-pages/man8/cron.8.html">cron</a> which is Linux standard
+daemon for executing scheduled commands. It basically runs in the background and executes a command or a script at
+particular time expressed by <a href="https://man7.org/linux/man-pages/man5/crontab.5.html">crontab</a> - classic now <code>0 12 * * *</code>
+format. It is still used nowadays in some cases, because it&rsquo;s already installed on UNIX systems and requires almost no
+setup.</p>
+<p>Cron is rather simple regarding process definition - it&rsquo;s limited to single command or single script. In most of
+modern schedulers a process is expressed using directed acyclic graph (DAG) of tasks. This way we can express patterns
+in a process like task <code>B</code> can run in parallel to task <code>A</code> and task <code>C</code> cannot start before <code>A</code> and <code>B</code> are done. Those
+processes usually run on a certain schedule. For example once a day at 8:00AM or each 15 minutes, but no on
+weekends. Some of them might have no schedule but are triggered externally.</p>
+<p><img src="dagexample.png" alt="img"></p>
+<p>Where this kind of software is used? From my perspective and best to my knowledge it&rsquo;s mostly used to orchestrate data
+processing. Let&rsquo;s consider an example where we need to prepare data for reporting layer. This process requires talking
+to many data sources, perhaps migrating data between clouds, then doing transformation and then aggregations on
+transformed data. This might be very complex process and it needs to run everyday. In this example our DAG could have
+separate tasks for migrating data, another for doing transformation in the database and yet another doing aggregations
+and exporting reporting data to external data source. Having scheduler in this example gives us many positive points
+such as:</p>
 <ul>
-<li>[2023-12-23] <a href="https://dskrzypiec.dev/new-scheduler/">New Scheduler</a></li>
-<li>[2023-08-21] <a href="https://dskrzypiec.dev/go-ast/">Getting method&rsquo;s source code in Go</a></li>
-<li>[2023-06-11] <a href="https://dskrzypiec.dev/parquet/">What&rsquo;s inside parquet file?</a></li>
-<li>[2023-04-15] <a href="https://dskrzypiec.dev/polars/">Polars - modern data frame library</a></li>
-<li>[2023-01-25] <a href="https://dskrzypiec.dev/aws-cdk-implicit/">Implicit is great util it isn&rsquo;t - AWS CDK example</a></li>
-<li>[2022-12-30] <a href="https://dskrzypiec.dev/year2022/">Summary of 2022</a></li>
-<li>[2022-11-26] <a href="https://dskrzypiec.dev/home-app-go/">Home App v2 - rewritten in Go</a></li>
-<li>[2022-10-26] <a href="https://dskrzypiec.dev/sqlite-parser/">Implementing SQLite parser in Scala</a></li>
-<li>[2022-09-10] <a href="https://dskrzypiec.dev/allegropay/">A year in Allegro Pay</a></li>
-<li>[2022-06-24] <a href="https://dskrzypiec.dev/scala/">First thoughts on Scala</a></li>
-<li>[2022-06-05] <a href="https://dskrzypiec.dev/copying-data/">Copying data between distributed systems</a></li>
-<li>[2022-03-20] <a href="https://dskrzypiec.dev/awk/">AWK - forgotten data engineering tool</a></li>
-<li>[2021-12-30] <a href="https://dskrzypiec.dev/year2021/">Summary of 2021</a></li>
-<li>[2021-11-14] <a href="https://dskrzypiec.dev/parsing-tsql/">Parsing T-SQL</a></li>
-<li>[2021-11-01] <a href="https://dskrzypiec.dev/fuzzy-finder/">Fuzzy Finder</a></li>
-<li>[2021-10-26] <a href="https://dskrzypiec.dev/foundations/">Foundations</a></li>
-<li>[2021-10-08] <a href="https://dskrzypiec.dev/bloom-filter/">Bloom Filter</a></li>
-<li>[2021-08-01] <a href="https://dskrzypiec.dev/leaving-pwc/">Leaving PwC</a></li>
-<li>[2021-06-06] <a href="https://dskrzypiec.dev/home-server/">Home Server</a></li>
-<li>[2021-04-27] <a href="https://dskrzypiec.dev/vimsessions/">Vim sessions</a></li>
-<li>[2021-04-22] <a href="https://dskrzypiec.dev/iterators/">Iterators in C#</a></li>
-<li>[2020-12-30] <a href="https://dskrzypiec.dev/year2020/">Summary of 2020</a></li>
-<li>[2020-11-11] <a href="https://dskrzypiec.dev/home-db/">Home DB</a></li>
-<li>[2020-10-25] <a href="https://dskrzypiec.dev/calka/">Goodbye Całka</a></li>
-<li>[2020-10-03] <a href="https://dskrzypiec.dev/mock-go-filesystem/">Mocking filesystem in Go</a></li>
-<li>[2020-09-25] <a href="https://dskrzypiec.dev/minipc/">Building a small form factor PC</a></li>
-<li>[2020-08-24] <a href="https://dskrzypiec.dev/smartphone/">Writing a blog on smartphone</a></li>
-<li>[2020-08-05] <a href="https://dskrzypiec.dev/quittingcmd/">I&rsquo;m quitting cmd</a></li>
-<li>[2019-10-11] <a href="https://dskrzypiec.dev/vimmovchallenge/">Vim movement challenge</a></li>
-<li>[2019-10-05] <a href="https://dskrzypiec.dev/favtechtalks/">My favorite tech talks</a></li>
-<li>[2019-09-05] <a href="https://dskrzypiec.dev/gosqlstdsqlx/">Go <em>database/sql</em> vs <em>github.com/jmoiron/sqlx</em> reading
-benchmark</a></li>
-<li>[2019-08-23] <a href="https://dskrzypiec.dev/quantiles/">What the quantile really is?</a></li>
+<li>Process is defined in single place (hopefully via code)</li>
+<li>If anything break, you know exactly what to fix and what can be affected by the failure</li>
+<li>You can resume processing after fixing the bug, because you know where the process stopped and all dependencies are
+contained in the DAG</li>
+<li>Usually you have history of runs for processes with task durations and other statistics, so you can tell if there is
+a slowdown</li>
 </ul>
+<p>A DAG of tasks provides the versatility to accurately represent any desired process. It doesn&rsquo;t need to be data
+processing. It might be for example setting up an infrastructure or an end-to-end tests environment.</p>
+<h2 id="how-it-started">How it started</h2>
+<p>In February 2023 I joined Point72 Risk Technology team, to help building new platform for computation and analytics. In
+addition to distributed computation functionalities we also needed a scheduler for processes around this new platform.
+We didn&rsquo;t want to use our legacy scheduler, because it was embedded in the &ldquo;old&rdquo; on-prem infrastructure. We decided to
+go with <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/what-is-mwaa.html">AWS MWAA</a> which is managed version of
+Airflow on AWS. At the time I was the only person on the team with actual hands-on experience with Airflow, so it was
+my responsibility, to setup infrastructure for MWAA (Terraform), the local development environment, CI/CD processes and
+integration with other systems used in our Risk department.</p>
+<p>It was my second adventure with Airflow and this time I&rsquo;ve had similar reflections. Airflow is very easy to use from
+developer view point and has rather good UI, but on the other hand Airflow has poor performance, uses a lot of
+resources and is not reliable. I&rsquo;ll probably talk more about downsides of Airflow another time.</p>
+<p>At this point I thought that I really like high-level idea of a scheduler and I&rsquo;d like to have improved version of
+Airflow. Something that is flexible enough (cannot be more flexible then Python though), has very good performance and
+is reliable and scalable. Also something that&rsquo;s easy to use locally or in simplified setup and at the same time can be
+deployed in the cloud or/and using Kubernetes. Around the second half of August 2023 I started my vacation and also I
+started thinking about high level architecture for a new scheduler written in Go and sketching implementation starting
+from small problems like <a href="https://dskrzypiec.dev/go-ast/">Getting method&rsquo;s source code in Go</a>.</p>
+<h2 id="why-new-scheduler">Why new scheduler?</h2>
+<p>All schedulers I&rsquo;ve seen or used can be categorized to at least one of the following groups. Is written in Python, is
+low-code or no-code where processes aren&rsquo;t defined as code or is proprietary with limited control. We have already
+mentioned Python examples - Airflow and Luigi. With this group, my main problems are safety, maintainability and
+performance. Example for low-code or no-code can be <a href="https://azure.microsoft.com/en-us/products/data-factory">Azure Data
+Factory</a>. It might be a good choice for some teams but in my
+opinion it&rsquo;s much better investment to have processes defined as a code in almost every case. It makes testing,
+refactoring and migrations possible with much less effort.</p>
+<p>Is it a good idea to pick language other than Python to write a scheduler when most of data engineering and data
+science stacks are based on Python? Yes, I think so. At least that&rsquo;s my opinion. I think in many cases Python doesn&rsquo;t
+pull its weight. Maintaining Python dependencies, over provisioning infrastructure to make it barely run and living
+without almost any assurance from type system or compilation usually doesn&rsquo;t justify advantage that Python is simple
+and we can swiftly write a lot of code.</p>
+<p>Another very important point for me is the fact that in this case I have sort of clear vision how my scheduler will
+look like. It&rsquo;s my first side project that I&rsquo;m working on for longer then a month (it&rsquo;s already four months). I feel
+it&rsquo;s good to have long term personal project to think about and work on. Even if everything I said in the previous
+paragraphs is nonsense I&rsquo;d still do it because of this single reason. I want to implement something that I&rsquo;d love to
+use daily and something I can trust. It doesn&rsquo;t need to be implemented by myself, so I can trust it, but at least it
+should behave as expected in most cases. Even if I&rsquo;ll be the only user, I think it&rsquo;s still worth it!</p>
+<h2 id="what-is-my-plan">What is my plan?</h2>
+<p>I started with regular Go project which had few packages and could built two binaries - scheduler and executor. Then I
+realized that those binaries are very thin wrappers for functionalities from those packages, so I asked myself is it
+possible to expose scheduler and executor just as regular Go packages? I think it&rsquo;s possible and that&rsquo;s what I&rsquo;m
+working on currently.</p>
+<p>However, those packages shouldn&rsquo;t be the end product. Even though packages won&rsquo;t be the only outcome of this
+project, making it public pushes me to write better documentation, prepare examples and think extra carefully about the
+API. All of the above are great things. In case when those packages would be private it&rsquo;s still desired to put effort
+in those aspects. To give a little bit of help to my strong will, deciding to make those packages public and
+treating them as intermediate artifacts should have a positive impact on the project overall.</p>
+<p>I don&rsquo;t really have very detailed plan. There&rsquo;s a lot of work to be done, but I&rsquo;m trying to do something along those
+lines</p>
+<ol>
+<li>Finish implementation and testing of scheduler and executor packages.</li>
+<li>Make it trivial to develop and run locally in simplified form (scheduler and executor in single binary + SQLite)</li>
+<li>Design UX for core functionalities.</li>
+<li>Implement first draft of the UI.</li>
+<li>Prepare Kubernetes deployment or something similar, to make it possible to deploy scheduler + N executors on
+separate nodes.</li>
+<li>Setup separate and proper website for documentation, examples, tutorials and other related stuff.</li>
+<li>???</li>
+<li>Profit.</li>
+</ol>
+<h2 id="details">Details?</h2>
+<p>Even though I have figured out high level architecture and few other details, I don&rsquo;t really want to say it publicly
+just yet. I think it might be too soon. I don&rsquo;t even have a name for this project yet. I&rsquo;ll definitely post more
+details on this project in the future!</p>
+<h2 id="summary">Summary</h2>
+<p>Yep, so because of this I haven&rsquo;t posted anything in last couple of months. Most of my spare time, besides family time
+and running I was spending working on this project. It&rsquo;s roughly 9k lines of Go including 4.5k lines of tests at the
+moment. I hope to keep working on this, to create something you would be excited to use in production environments.</p>
 
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           <footer role="contentinfo">
   <div>
