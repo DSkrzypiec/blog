@@ -6,7 +6,17 @@
     <description>Recent content in Go on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing ppacer: yet another DAG scheduler which I prefer</title>
+      <link>https://dskrzypiec.dev/ppacer-intro/</link>
+      <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/ppacer-intro/</guid>
+      <description>Intro As I mentioned in New Scheduler, in the second half of 2023 I started working on implementing new scheduler in Go. In this post I wanted to share with you the current status of the project, next steps and few links.
+The name: ppacer At the end of the previous year I was already working already for 4-5 months on this project but still I didn&amp;rsquo;t have a name for it.</description>
+    </item>
+    
     <item>
       <title>New Scheduler</title>
       <link>https://dskrzypiec.dev/new-scheduler/</link>

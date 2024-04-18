@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.82.0-DEV" />
-  <link rel="canonical" href="https://dskrzypiec.dev/tags/general/">
+  <link rel="canonical" href="https://dskrzypiec.dev/ppacer-intro/">
 
   
 
@@ -32,7 +32,7 @@
 
   
   
-  <title>General | DSkrzypiec Blog</title>
+  <title>Introducing ppacer: yet another DAG scheduler which I prefer | DSkrzypiec Blog</title>
 </head>
 
   <body>
@@ -166,7 +166,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/post/" >
+      <a href="https://dskrzypiec.dev/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -179,7 +179,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/tags/" aria-current="page">
+      <a href="https://dskrzypiec.dev/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -221,44 +221,157 @@
         <div>
           
   <main id="main">
-    <h1>General</h1>
-    <ul class="patterns-list">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Introducing ppacer: yet another DAG scheduler which I prefer
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong aria-hidden="true">Publish date: </strong>Apr 18, 2024
+      
+        
+      
+    </div>
+
     
-      <li>
-        <h2>
-          <a href="https://dskrzypiec.dev/ppacer-intro/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Introducing ppacer: yet another DAG scheduler which I prefer
-          </a>
-        </h2>
-      </li>        
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/general/">General</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/go/">Go</a>
+            </li>
+          
+        </ul>
+      </div>
     
-      <li>
-        <h2>
-          <a href="https://dskrzypiec.dev/new-scheduler/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            New Scheduler
-          </a>
-        </h2>
-      </li>        
     
-      <li>
-        <h2>
-          <a href="https://dskrzypiec.dev/foundations/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Foundations
-          </a>
-        </h2>
-      </li>        
     
-    </ul>
+
+    <h2 id="intro">Intro</h2>
+<p>As I mentioned in <a href="https://dskrzypiec.dev/new-scheduler">New Scheduler</a>, in the
+second half of 2023 I started working on implementing new scheduler in Go. In
+this post I wanted to share with you the current status of the project, next
+steps and few links.</p>
+<h2 id="the-name-ppacer">The name: ppacer</h2>
+<p>At the end of the previous year I was already working already for 4-5 months on
+this project but still I didn&rsquo;t have a name for it. On my local disk it lived
+in <code>gosched</code> catalog for those couple of months. It was to this point, that I
+even setup a <a href="https://dskrzypiec.dev/year2023/#goals-for-2024">goal for 2024</a>,
+to come up with a name for the project.</p>
+<p>Around mid January 2024 I finally came up with the name - <code>ppacer</code>. The part
+&lsquo;pacer&rsquo; comes from running. In marathons or other races a pacer is a runner who
+helps to set the pace for other runners. The initial &ldquo;p&rdquo; comes from a word
+&ldquo;process&rdquo;. So it&rsquo;s a loose analogy to something that sets the pace for your
+processes. At the same time it uses the same name convention as other famous
+tool - <a href="https://github.com/google/pprof">pprof</a>, which I think sounds really
+good.</p>
+<p>There it is, I have the name! I was really happy. That enabled me to buy a
+domain and create an organization on GitHub.</p>
+<h2 id="current-status">Current status</h2>
+<p>At the moment <code>ppacer</code> is a set of Go libraries which can be used, to define
+and build a DAG which would run on a schedule, a scheduler and an executor. All
+those components can be compiled into single statically linked binary, or there
+might be single scheduler program and multiple executors placed on separate
+machines. Anyway, very basic version of the backend is ready. It doesn&rsquo;t yet
+have MPV coverage regarding features, but it&rsquo;s good enough to be used in some
+setups.</p>
+<p>Currently I&rsquo;m using ppacer to do backups of my
+<a href="https://dskrzypiec.dev/home-app-go/">Home Database</a> and refresh TLS
+certificates for my applications.</p>
+<p>There is no frontend yet at all. If you&rsquo;re fine with checking logs or DAG runs
+information in SQLite or any other Go sql-compatible database, feel free to
+play with it.</p>
+<h2 id="ppacer-links">ppacer links</h2>
+<p>There are few links you might be interested in, if this project sounds
+interesting to you. There is <a href="https://github.com/ppacer">github.com/ppacer</a>
+organization on GitHub. There you can find</p>
+<ul>
+<li>Project with ppacer core Go libraries -
+<a href="https://github.com/ppacer/core">github.com/ppacer/core</a></li>
+<li>Repository with usage examples -
+<a href="https://github.com/ppacer/examples">github.com/ppacer/examples</a></li>
+<li>Repository with generic ppacer <code>Tasks</code> -
+<a href="https://github.com/ppacer/tasks">github.com/ppacer/tasks</a></li>
+</ul>
+<p>Standard Go packages documentation (API reference) can be found in here:</p>
+<ul>
+<li><a href="https://pkg.go.dev/github.com/ppacer/core">pkg.go.dev/github.com/ppacer/core</a></li>
+</ul>
+<p>Last but not least, ppacer main page for high-level documentation, examples and
+other information is here:</p>
+<ul>
+<li><a href="https://ppacer.org">ppacer.org</a></li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<p>As I mentioned ppacer backed is working for arbitrary minimal set of selected
+features. I&rsquo;d like to focus now on the frontend part, but before I do, I
+decided to write down a bit of documentation. One part is Go libraries public
+API documentation. That was mostly written during the development, so it needed
+to be just polished a bit. The other part is documenting high-level design,
+instructions on how to use ppacer, how to extend it, how to implement your own
+schedules and so on.</p>
+<p>There are few reasons why I want to do it. One is to show potential users or
+interested developers how to even start and run &ldquo;hello world&rdquo; example. The
+other reason is for me in the future, when I&rsquo;ll be back from frontend
+development, to remember what I was thinking months ago and why I choose to
+implement it this and not the other way. Another reason was a bit surprising.
+Writing down documentation helped me a lot, to make libraries API better and
+more consistent. Being a single developer on the project should already give a
+lot of consistency but even in this case I saw small differences in naming or
+conventions over the time. Writing it down in documentation helped me see it. I
+wish I had done it earlier in the project.</p>
+<p>A friend recommended me <a href="https://starlight.astro.build">Astro starlight</a>, to
+build documentation web page. It&rsquo;s great! It&rsquo;s really easy to setup, it&rsquo;s
+rather flexible and looks gorgeous in my opinion - lean, fast and modern.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>The next steps for the project are as follows:</p>
+<ol>
+<li>Finish writing documentation for existing backend</li>
+<li>Start working on frontend PoC (probably HTMX + tmpl)</li>
+<li>Design the logo</li>
+<li>Write first version of ppacer frontend</li>
+<li>Go back to add few more features on the backed</li>
+<li>Prepare ppacer MVP version</li>
+<li>&hellip;</li>
+<li>Profit?</li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>That&rsquo;s it for now. It&rsquo;s not really yet &ldquo;introducing ppacer&rdquo; it&rsquo;s rather
+introducing the name and give you the current status, but hey I liked that
+title. By the way the title of this post was inspired by Maxwell calling his
+work on theory of electromagnetism &ldquo;another theory of electricity which I
+prefer&rdquo;. You can read about this very interesting story in <a href="https://www.damtp.cam.ac.uk/user/tong/em/dyson.pdf">this
+essay</a>.</p>
+<p>If you&rsquo;re interested in the project already, you can find the &ldquo;hello world&rdquo;
+example in here: <a href="https://ppacer.org/start/intro/">ppacer.org/start/intro/</a>.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.damtp.cam.ac.uk/user/tong/em/dyson.pdf">Why is Maxwell&rsquo;s Theory so hard to
+understand?</a></li>
+</ol>
+
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           <footer role="contentinfo">
   <div>
