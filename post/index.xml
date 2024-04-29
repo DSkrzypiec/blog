@@ -6,7 +6,17 @@
     <description>Recent content in Posts on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing cron</title>
+      <link>https://dskrzypiec.dev/cron/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/cron/</guid>
+      <description>Intro Recently, I have been documenting ppacer schedules and in that moment I thought I should have probably implemented cron schedule for ppacer. Before I explain why, let&amp;rsquo;s take one step back to give you a bit of context about ppacer schedules. Schedules in ppacer are covered by generic and simple interface
+type Schedule interface { Start() time.Time Next(current time.Time, prevSched *time.Time) time.Time String() string } Initially I&amp;rsquo;ve provided the simplest possible regular schedule which satisfies that interface - schedule.</description>
+    </item>
+    
     <item>
       <title>Introducing ppacer: yet another DAG scheduler which I prefer</title>
       <link>https://dskrzypiec.dev/ppacer-intro/</link>
