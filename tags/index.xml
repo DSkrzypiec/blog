@@ -6,20 +6,20 @@
     <description>Recent content in Tags on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data engineering</title>
-      <link>https://dskrzypiec.dev/tags/data-engineering/</link>
-      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      <title>General</title>
+      <link>https://dskrzypiec.dev/tags/general/</link>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://dskrzypiec.dev/tags/data-engineering/</guid>
+      <guid>https://dskrzypiec.dev/tags/general/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
       <link>https://dskrzypiec.dev/tags/go/</link>
-      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.dev/tags/go/</guid>
       <description></description>
@@ -28,18 +28,18 @@
     <item>
       <title>ppacer</title>
       <link>https://dskrzypiec.dev/tags/ppacer/</link>
-      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://dskrzypiec.dev/tags/ppacer/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>General</title>
-      <link>https://dskrzypiec.dev/tags/general/</link>
-      <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
+      <title>Data engineering</title>
+      <link>https://dskrzypiec.dev/tags/data-engineering/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://dskrzypiec.dev/tags/general/</guid>
+      <guid>https://dskrzypiec.dev/tags/data-engineering/</guid>
       <description></description>
     </item>
     
