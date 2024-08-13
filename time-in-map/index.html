@@ -6,10 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.82.0-DEV" />
-  <link rel="canonical" href="https://dskrzypiec.dev/">
+  <link rel="canonical" href="https://dskrzypiec.dev/time-in-map/">
 
-  
-    
   
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://dskrzypiec.dev/apple-touch-icon.png">
@@ -34,9 +32,7 @@
 
   
   
-    
-  
-  <title>DSkrzypiec Blog</title>
+  <title>Be Cautious When Using time.Time as Keys in Go Maps | DSkrzypiec Blog</title>
 </head>
 
   <body>
@@ -157,7 +153,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/" aria-current="page">
+      <a href="https://dskrzypiec.dev/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -170,7 +166,7 @@
       
       
       
-      <a href="https://dskrzypiec.dev/post/" >
+      <a href="https://dskrzypiec.dev/post/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -225,50 +221,184 @@
         <div>
           
   <main id="main">
-    <h1>Home</h1>
-    <h2 id="list-of-posts">List of posts:</h2>
-<ul>
-<li>[2024-08-13] <a href="https://dskrzypiec.dev/time-in-map/">Be Cautious When Using time.Time as Keys in Go Maps</a></li>
-<li>[2024-07-30] <a href="https://dskrzypiec.dev/ppacer001/">Releasing ppacer v0.0.1</a></li>
-<li>[2024-04-29] <a href="https://dskrzypiec.dev/cron/">Implementing cron</a></li>
-<li>[2024-04-18] <a href="https://dskrzypiec.dev/ppacer-intro/">Introducing ppacer: yet another DAG scheduler which I prefer</a></li>
-<li>[2023-12-30] <a href="https://dskrzypiec.dev/year2023/">Summary of 2023</a></li>
-<li>[2023-12-23] <a href="https://dskrzypiec.dev/new-scheduler/">New Scheduler</a></li>
-<li>[2023-08-21] <a href="https://dskrzypiec.dev/go-ast/">Getting method&rsquo;s source code in Go</a></li>
-<li>[2023-06-11] <a href="https://dskrzypiec.dev/parquet/">What&rsquo;s inside parquet file?</a></li>
-<li>[2023-04-15] <a href="https://dskrzypiec.dev/polars/">Polars - modern data frame library</a></li>
-<li>[2023-01-25] <a href="https://dskrzypiec.dev/aws-cdk-implicit/">Implicit is great util it isn&rsquo;t - AWS CDK example</a></li>
-<li>[2022-12-30] <a href="https://dskrzypiec.dev/year2022/">Summary of 2022</a></li>
-<li>[2022-11-26] <a href="https://dskrzypiec.dev/home-app-go/">Home App v2 - rewritten in Go</a></li>
-<li>[2022-10-26] <a href="https://dskrzypiec.dev/sqlite-parser/">Implementing SQLite parser in Scala</a></li>
-<li>[2022-09-10] <a href="https://dskrzypiec.dev/allegropay/">A year in Allegro Pay</a></li>
-<li>[2022-06-24] <a href="https://dskrzypiec.dev/scala/">First thoughts on Scala</a></li>
-<li>[2022-06-05] <a href="https://dskrzypiec.dev/copying-data/">Copying data between distributed systems</a></li>
-<li>[2022-03-20] <a href="https://dskrzypiec.dev/awk/">AWK - forgotten data engineering tool</a></li>
-<li>[2021-12-30] <a href="https://dskrzypiec.dev/year2021/">Summary of 2021</a></li>
-<li>[2021-11-14] <a href="https://dskrzypiec.dev/parsing-tsql/">Parsing T-SQL</a></li>
-<li>[2021-11-01] <a href="https://dskrzypiec.dev/fuzzy-finder/">Fuzzy Finder</a></li>
-<li>[2021-10-26] <a href="https://dskrzypiec.dev/foundations/">Foundations</a></li>
-<li>[2021-10-08] <a href="https://dskrzypiec.dev/bloom-filter/">Bloom Filter</a></li>
-<li>[2021-08-01] <a href="https://dskrzypiec.dev/leaving-pwc/">Leaving PwC</a></li>
-<li>[2021-06-06] <a href="https://dskrzypiec.dev/home-server/">Home Server</a></li>
-<li>[2021-04-27] <a href="https://dskrzypiec.dev/vimsessions/">Vim sessions</a></li>
-<li>[2021-04-22] <a href="https://dskrzypiec.dev/iterators/">Iterators in C#</a></li>
-<li>[2020-12-30] <a href="https://dskrzypiec.dev/year2020/">Summary of 2020</a></li>
-<li>[2020-11-11] <a href="https://dskrzypiec.dev/home-db/">Home DB</a></li>
-<li>[2020-10-25] <a href="https://dskrzypiec.dev/calka/">Goodbye Całka</a></li>
-<li>[2020-10-03] <a href="https://dskrzypiec.dev/mock-go-filesystem/">Mocking filesystem in Go</a></li>
-<li>[2020-09-25] <a href="https://dskrzypiec.dev/minipc/">Building a small form factor PC</a></li>
-<li>[2020-08-24] <a href="https://dskrzypiec.dev/smartphone/">Writing a blog on smartphone</a></li>
-<li>[2020-08-05] <a href="https://dskrzypiec.dev/quittingcmd/">I&rsquo;m quitting cmd</a></li>
-<li>[2019-10-11] <a href="https://dskrzypiec.dev/vimmovchallenge/">Vim movement challenge</a></li>
-<li>[2019-10-05] <a href="https://dskrzypiec.dev/favtechtalks/">My favorite tech talks</a></li>
-<li>[2019-09-05] <a href="https://dskrzypiec.dev/gosqlstdsqlx/">Go <em>database/sql</em> vs <em>github.com/jmoiron/sqlx</em> reading
-benchmark</a></li>
-<li>[2019-08-23] <a href="https://dskrzypiec.dev/quantiles/">What the quantile really is?</a></li>
-</ul>
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Be Cautious When Using time.Time as Keys in Go Maps
+    </h1>
+
+    <div class="date">
+      
+      
+      <strong aria-hidden="true">Publish date: </strong>Aug 13, 2024
+      
+        
+      
+    </div>
+
+    
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              
+              <a href="https://dskrzypiec.dev/tags/go/">Go</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+
+    <h2 id="intro">Intro</h2>
+<p>Recently, I encountered a strange bug in <a href="https://ppacer.org">ppacer</a>. The
+scheduler had a bug that only appeared on Linux, which was particularly
+concerning since it directly affected ppacer&rsquo;s core functionality: scheduling.</p>
+<p>Before we dive into the details, I want to mention that throughout the
+development of ppacer, I rarely encountered issues that took more than a few
+minutes to debug. However, this particular bug took me 4-5 hours to track down.
+That why I thought that this behavior might not be obvious to others as well.
+So, I’d like to share what I’ve learned.</p>
+<p>I&rsquo;ll try to focus on the bug and solution in abstraction, without getting into
+details of ppacer internal types and logic.</p>
+<h2 id="symptoms">Symptoms</h2>
+<p>Using ppacer I wanted to schedule and execute a process which after the first
+task has another two concurrent tasks, to be scheduled. The first task was
+scheduled and executed successfully, but then its children never got scheduled.
+No errors, nothing. They simply won&rsquo;t schedule.</p>
+<p>This issue occurred on a relatively modest EC2 instance (2GB RAM, 2 vCPU)
+running Linux. Strangely, the exact same program ran perfectly on Windows and
+macOS (MacBook Air M1). That was puzzling. For context, ppacer is built with Go
+1.22, and its only dependency is a driver for SQLite.</p>
+<h2 id="debugging">Debugging</h2>
+<p>Initially, I thought the issue might be due to the limited resources on the
+mentioned EC2 instance. However, ppacer generally doesn&rsquo;t consume much in terms
+of resources, and the particular example in question was relatively simple, so
+that didn&rsquo;t seem to be the case. Checking the process metrics confirmed that
+everything was running smoothly.</p>
+<p>After running the same program with logging enabled at the <code>DEBUG</code> level, I
+discovered that the child tasks weren&rsquo;t getting scheduled because the parent
+task&rsquo;s status in the cache was <code>SCHEDULED</code> rather than <code>SUCCESS</code>.</p>
+<p>I couldn&rsquo;t figure out how this was possible. The logs clearly showed that the
+correct <code>SUCCESS</code> status was stored in the cache, but when another goroutine
+retrieved the value from the cache for the same key, it returned <code>SCHEDULED</code>
+instead. That made no sense at all! This particular LRU cache was designed to
+be thread-safe—or as we should say, goroutine-safe. I increased logging,
+checked for race conditions, and even tried using a much simpler cache—a
+regular Go map with a <code>mutex</code>. Still nothing…</p>
+<p>Since I had exhausted all ideas related to concurrency, I decided to look into
+the cache itself. It would have been strange if I had misused a regular Go map
+protected by <code>sync.Mutex</code>, but I didn&rsquo;t have any better ideas. Then I noticed
+these log lines:</p>
+<pre><code>time=2024-08-12T11:30:00.140Z level=WARN msg=&quot;Cache info!&quot; len=2
+time=2024-08-12T11:30:00.140Z level=WARN msg=&quot;  --{{DagId:hello_world_dag AtTime:2024-08-12 11:30:00 +0000 UTC TaskId:start}}:
+    {{Status:SCHEDULED StatusUpdateTs:2024-08-12 11:30:00.119866267 +0000 UTC}}\n&quot;
+time=2024-08-12T11:30:00.140Z level=WARN msg=&quot;  --{{DagId:hello_world_dag AtTime:2024-08-12 11:30:00 +0000 UTC TaskId:start}}:
+    {{Status:RUNNING StatusUpdateTs:2024-08-12 11:30:00.138728617 +0000 UTC}}\n&quot;
+</code></pre><p>That’s interesting! We have two entries in the cache that seem to have
+identical keys but different values. How is this possible? It’s simple: those
+keys are actually different, even though they look identical. How is that
+possible? We’ll talk about it in a moment.</p>
+<h2 id="timetime-in-go-map-keys"><code>time.Time</code> in Go map keys</h2>
+<p>In ppacer, when task execution is completed, <code>exec.Executor</code> sends its status
+back to the Scheduler via an HTTP request. The ppacer Scheduler then updates
+its task cache and persists that information in the database.</p>
+<p>All right, but how those key in the cache looks the same but are not the same?
+It&rsquo;s because <code>time.Time</code>, besides regular &ldquo;wall clock&rdquo;, contains also
+information about <a href="https://pkg.go.dev/time#hdr-Monotonic_Clocks">monotonic
+clock</a>. Timestamps <code>t1</code> and <code>t2</code>
+might present the same date, time and timezone information but when &ldquo;monotonic
+clock&rdquo; values are different, then those object will be different and would be
+treated as different keys when used in a dictionary.</p>
+<p>That makes sense, but why did I observe different behaviour on different
+platforms in ppacer? There are two reasons. First, the behavior of monotonic
+clocks is determined by an operating system. Second, the monotonic clock value
+is rather useless outside of the process in which it&rsquo;s being used, so that part
+of <code>time.Time</code> is skipped in serialization. Since Executor sends updated status
+for given task (<code>{DagId string, ExecTs time.Time, TaskId string}</code>) via HTTP, it
+needs to serialize that data.</p>
+<h2 id="reproducible-example">Reproducible example</h2>
+<p>Let&rsquo;s consider the following simple Go program:</p>
+<pre><code>package main
+
+import (
+        &quot;fmt&quot;
+        &quot;time&quot;
+)
+
+const TimestampFormat = &quot;2006-01-02T15:04:05.999999MST-07:00&quot;
+
+type Key struct {
+    Name      string
+    Timestamp time.Time
+}
+
+func main() {
+    const name = &quot;Damian&quot;
+
+    cache := make(map[Key]int)
+
+    now := time.Date(2024, 8, 12, 16, 5, 0, 0, time.Local)
+    k1 := Key{Name: name, Timestamp: now}
+    cache[k1] = 42
+
+    // serialize and deserialize
+    nowStr := now.Format(TimestampFormat)
+    now2, _ := time.Parse(TimestampFormat, nowStr)
+    k2 := Key{Name: name, Timestamp: now2}
+    cache[k2] = -123
+
+    for k, v := range cache {
+            fmt.Printf(&quot;  -%v: %d\n&quot;, k, v)
+    }
+}
+</code></pre><p>The program defines a dictionary that maps Key onto integers. We then define a
+constant timestamp now and add an entry to the cache. After that, we serialize
+and deserialize the same timestamp and use it in another key for our cache.
+Finally, we print the contents of the cache.</p>
+<p>When we compile and run that program using Go 1.22 on macOS we got the
+following output:</p>
+<pre><code>  -{Damian 2024-08-12 16:05:00 +0200 CEST}: -123
+</code></pre><p>Single entry in the cache with updated value (from 42 to -123). Let&rsquo;s take a
+look what&rsquo;s the output when running the same program, also using Go 1.22, but
+on Debian:</p>
+<pre><code>  -{Damian 2024-08-12 16:05:00 +0000 UTC}: 42
+  -{Damian 2024-08-12 16:05:00 +0000 UTC}: -123
+</code></pre><p>We get two entries in the cache that look the same but are not. Please ignore
+the UTC timezone — my Linux machine has a different local timezone set.</p>
+<h2 id="solution">Solution</h2>
+<p>With this understanding, the solution to the bug was relatively simple. I just
+needed to change the type I use for cache keys:</p>
+<pre><code>type DRTBase struct {
+    DagId  dag.Id
+    AtTime string // it used to be a time.Time
+    TaskId string
+}
+</code></pre><p>and use serialized timestamp values in cache keys instead of <code>time.Time</code>.</p>
+<h2 id="summary">Summary</h2>
+<p>To sum it up, just be careful when using <code>time.Time</code> in Go map keys. I&rsquo;m not
+saying you should avoid it, but make sure to read the documentation for the
+time standard package, especially the section on monotonic clocks and which
+functions from that package can modify those values.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://pkg.go.dev/time#hdr-Monotonic_Clocks">Go time package - Monotonic
+Clocks</a></li>
+<li><a href="https://github.com/ppacer/core/commit/5f71e08160072dd3237544a6aeb35265a3332d66">Bug fix
+commit</a></li>
+</ol>
 
   </main>
+  <div id="disqus-container">
+  
+</div>
+
 
           <footer role="contentinfo">
   <div>

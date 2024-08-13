@@ -6,7 +6,17 @@
     <description>Recent content in Posts on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be Cautious When Using time.Time as Keys in Go Maps</title>
+      <link>https://dskrzypiec.dev/time-in-map/</link>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/time-in-map/</guid>
+      <description>Intro Recently, I encountered a strange bug in ppacer. The scheduler had a bug that only appeared on Linux, which was particularly concerning since it directly affected ppacer&amp;rsquo;s core functionality: scheduling.
+Before we dive into the details, I want to mention that throughout the development of ppacer, I rarely encountered issues that took more than a few minutes to debug. However, this particular bug took me 4-5 hours to track down.</description>
+    </item>
+    
     <item>
       <title>Releasing ppacer v0.0.1</title>
       <link>https://dskrzypiec.dev/ppacer001/</link>

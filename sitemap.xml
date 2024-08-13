@@ -2,25 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dskrzypiec.dev/tags/general/</loc>
-    <lastmod>2024-07-30T00:00:00+00:00</lastmod>
+    <loc>https://dskrzypiec.dev/time-in-map/</loc>
+    <lastmod>2024-08-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/go/</loc>
-    <lastmod>2024-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/</loc>
-    <lastmod>2024-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/post/</loc>
+    <lastmod>2024-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/tags/</loc>
+    <lastmod>2024-08-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/tags/general/</loc>
     <lastmod>2024-07-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/ppacer/</loc>
     <lastmod>2024-07-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/ppacer001/</loc>
-    <lastmod>2024-07-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/tags/</loc>
     <lastmod>2024-07-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/tags/data-engineering/</loc>
