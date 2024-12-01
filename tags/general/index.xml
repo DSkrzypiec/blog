@@ -6,7 +6,17 @@
     <description>Recent content in General on DSkrzypiec Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dskrzypiec.dev/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I made a knife</title>
+      <link>https://dskrzypiec.dev/knife/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dskrzypiec.dev/knife/</guid>
+      <description>Intro On a November weekend, I participated in a knife-making workshop. This experience was a gift from my wonderful wife. The workshop took place in Warsaw and was conducted by Kłosy.
+Getting Started We began on Saturday at 9:00 AM by choosing the material for the knife handle and the size of the knife. The options included a small kitchen knife, a forest mushroom knife, and a chef&amp;rsquo;s knife. I chose cherry wood stabilized with colorful resin and opted for the small kitchen knife.</description>
+    </item>
+    
     <item>
       <title>Releasing ppacer v0.0.1</title>
       <link>https://dskrzypiec.dev/ppacer001/</link>
