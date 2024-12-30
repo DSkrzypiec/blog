@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dskrzypiec.dev/tags/annual-summary/</loc>
+    <lastmod>2024-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/</loc>
+    <lastmod>2024-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/post/</loc>
+    <lastmod>2024-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/year2024/</loc>
+    <lastmod>2024-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dskrzypiec.dev/tags/</loc>
+    <lastmod>2024-12-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dskrzypiec.dev/tags/general/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dskrzypiec.dev/</loc>
-    <lastmod>2024-12-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://dskrzypiec.dev/knife/</loc>
-    <lastmod>2024-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/post/</loc>
-    <lastmod>2024-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/tags/</loc>
     <lastmod>2024-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/time-in-map/</loc>
@@ -37,9 +43,6 @@
   </url><url>
     <loc>https://dskrzypiec.dev/ppacer-intro/</loc>
     <lastmod>2024-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dskrzypiec.dev/tags/annual-summary/</loc>
-    <lastmod>2023-12-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dskrzypiec.dev/year2023/</loc>
     <lastmod>2023-12-30T00:00:00+00:00</lastmod>
