@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="pl" data-astro-cid-gvpn4u4b> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Warzenie piwa, a inżynieria oprogramowania</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.26/dist/katex.min.css" crossorigin="anonymous"><style>*,*:before,*:after{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}html{-webkit-text-size-adjust:100%}:root{--bg-color: #111010;--text-primary: #ffe9c6;--text-secondary: #2AA198;--accent-color: #f97d43;--font-body: "Roboto", sans-serif;--font-code: "JetBrains Mono", monospace}html{font-size:19px}@media (max-width: 480px){html{font-size:16px}}@media (max-width: 360px){html{font-size:15px}}body{font-size:1rem;line-height:1.66;background-color:var(--bg-color);color:var(--text-primary);font-family:var(--font-body);margin:0;padding:0;word-wrap:break-word;overflow-wrap:break-word}h1{font-size:2.25rem;line-height:1.2}h2{font-size:1.75rem;line-height:1.3}h3{font-size:1.35rem;line-height:1.35}@media (max-width: 768px){h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.2rem}}@media (max-width: 480px){h1{font-size:1.75rem}h2{font-size:1.35rem}h3{font-size:1.1rem}}@media (max-width: 360px){h1{font-size:1.6rem}h2{font-size:1.25rem}h3{font-size:1.05rem}}a{color:var(--text-secondary);text-decoration:none}a:hover{text-decoration:underline}pre{background-color:#1e1e1e;border-radius:8px;padding:1rem;overflow-x:auto;margin:1rem 0;font-size:15px;font-family:var(--font-code)}code{background-color:transparent}pre>code{display:block}.toc ul{list-style:none;margin:0;padding:0}.toc li{margin:.5rem 0}.toc a{color:var(--text-secondary);text-decoration:none}.toc a:hover{text-decoration:underline}.toc a.active{font-weight:700;color:var(--accent-color)}nav[data-astro-cid-dmqpwcec]{padding:1rem 0;display:flex;align-items:center;justify-content:center;position:relative}ul[data-astro-cid-dmqpwcec]{list-style:none;padding:0;margin:0;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap}.lang-toggle[data-astro-cid-dmqpwcec]{position:absolute;right:1rem;top:50%;transform:translateY(-50%);display:inline-flex;align-items:center;gap:.75rem;font-size:.95rem}.lang[data-astro-cid-dmqpwcec]{color:var(--text-primary);font-size:.95rem;text-decoration:none;padding:.2rem .3rem;border-bottom:2px solid transparent;transition:all .3s ease-in-out}a[data-astro-cid-dmqpwcec].lang:hover{color:var(--accent-color)}.lang[data-astro-cid-dmqpwcec].current{color:var(--accent-color);border-bottom:2px solid var(--accent-color)}.lang[data-astro-cid-dmqpwcec].dimmed{opacity:.4}@media (max-width: 480px){ul[data-astro-cid-dmqpwcec]{gap:1rem}a[data-astro-cid-dmqpwcec]{font-size:1rem;padding:.4rem .8rem}}@media (max-width: 360px){ul[data-astro-cid-dmqpwcec]{gap:.5rem}a[data-astro-cid-dmqpwcec]{font-size:.9rem;padding:.3rem .6rem}}@media (max-width: 768px){nav[data-astro-cid-dmqpwcec]{flex-direction:column;gap:.5rem}.lang-toggle[data-astro-cid-dmqpwcec]{position:static}}li[data-astro-cid-dmqpwcec]{display:inline}a[data-astro-cid-dmqpwcec]{color:var(--text-primary);font-size:1.2rem;padding:.5rem 1rem;border:1px solid transparent;transition:all .3s ease-in-out}ul[data-astro-cid-dmqpwcec] a[data-astro-cid-dmqpwcec]:hover{border:1px solid var(--accent-color);border-radius:4px;color:var(--accent-color)}.active[data-astro-cid-dmqpwcec] a[data-astro-cid-dmqpwcec]{color:var(--accent-color);font-weight:700;border-bottom:2px solid var(--accent-color)}hr[data-astro-cid-dmqpwcec]{margin-top:1rem;border:none;height:2px;background:var(--text-secondary);width:90%;max-width:800px;margin-left:auto;margin-right:auto}
+.post-title[data-astro-cid-resui2ln]{margin-bottom:2rem}.post-title[data-astro-cid-resui2ln] h1[data-astro-cid-resui2ln]{font-size:1.75rem;color:var(--accent-color);margin:0}.post-date[data-astro-cid-resui2ln]{font-size:1rem;color:var(--text-secondary);margin-top:.5rem}.publish-label[data-astro-cid-resui2ln]{font-weight:700;color:var(--text-primary)}
+.chapter[data-astro-cid-5d3zeytc]{font-size:2rem;margin-top:2rem;color:var(--accent-color)}.chapter[data-astro-cid-5d3zeytc] a[data-astro-cid-5d3zeytc]{color:var(--accent-color);text-decoration:none}.chapter[data-astro-cid-5d3zeytc] a[data-astro-cid-5d3zeytc]:hover{text-decoration:underline}
+.post-layout{display:flex;flex-direction:row}@media (min-width: 1024px){.post-layout{flex-direction:row}.post-layout-sidebar{position:fixed;left:2rem;top:10rem;width:200px;font-size:.85rem;padding:1rem;z-index:10}.post-layout-content{flex:1;max-width:1000px;margin:0 auto;padding-left:240px;padding-right:2rem}}@media (min-width: 1400px){.post-layout-content{max-width:1200px}}.post-layout-sidebar{display:none}@media (min-width: 1024px){.post-layout-sidebar{display:block}}@media (max-width: 1023px){.post-layout{flex-direction:column}.post-layout-content{width:100%;max-width:100%}}:global(pre){width:100%!important;max-width:100%!important;overflow-x:auto;box-sizing:border-box}:global(.astro-code){width:100%!important;max-width:100%!important;box-sizing:border-box}:global(.astro-code pre){width:100%!important;max-width:100%!important;overflow-x:auto;box-sizing:border-box}:global(.post-layout-content pre){max-width:100%!important;overflow-x:auto;word-wrap:break-word;white-space:pre-wrap}main[data-astro-cid-gvpn4u4b]{padding:2rem 1rem;max-width:900px;margin:0 auto;width:100%;box-sizing:border-box}@media (min-width: 1024px){main[data-astro-cid-gvpn4u4b]{padding:2rem 0;max-width:none}}@media (max-width: 768px){main[data-astro-cid-gvpn4u4b]{padding:1.5rem .75rem}}@media (max-width: 480px){main[data-astro-cid-gvpn4u4b]{padding:1rem .5rem}}article[data-astro-cid-gvpn4u4b]{max-width:800px;width:100%;margin:0 auto;color:var(--text-primary);box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}h1[data-astro-cid-gvpn4u4b],h2[data-astro-cid-gvpn4u4b],h3[data-astro-cid-gvpn4u4b]{color:var(--accent-color);margin-top:1.5rem;word-wrap:break-word;overflow-wrap:break-word}p[data-astro-cid-gvpn4u4b]{color:var(--text-secondary);word-wrap:break-word;overflow-wrap:break-word;hyphens:auto}img[data-astro-cid-gvpn4u4b]{max-width:100%;max-height:400px;width:auto;height:auto;border-radius:8px;margin:1rem 0;object-fit:contain}@media (max-width: 768px){img[data-astro-cid-gvpn4u4b]{max-height:300px}}@media (max-width: 480px){img[data-astro-cid-gvpn4u4b]{max-height:250px}}blockquote[data-astro-cid-gvpn4u4b]{border-left:4px solid var(--accent-color);padding-left:1rem;color:var(--text-primary);font-style:italic;margin:1rem 0}code[data-astro-cid-gvpn4u4b]{font-family:monospace;background:#ffffff1a;padding:.2rem .4rem;border-radius:4px;font-size:.95rem}
+.image-container[data-astro-cid-6kov3kig]{display:flex;flex-direction:column;align-items:center;margin:1.5rem 0}.image-container[data-astro-cid-6kov3kig] img[data-astro-cid-6kov3kig]{width:auto;height:auto;border-radius:8px;object-fit:contain;box-shadow:0 4px 8px #0000001a}.image-container[data-astro-cid-6kov3kig] img[data-astro-cid-6kov3kig].inverted{filter:invert(1)}.image-caption[data-astro-cid-6kov3kig]{margin-top:.5rem;font-size:.9rem;color:var(--text-secondary, #666);font-style:italic;text-align:center;max-width:600px}@media (max-width: 768px){.image-container[data-astro-cid-6kov3kig]{margin:1rem 0}.image-container[data-astro-cid-6kov3kig] img[data-astro-cid-6kov3kig]{max-height:300px!important}}@media (max-width: 480px){.image-container[data-astro-cid-6kov3kig] img[data-astro-cid-6kov3kig]{max-height:250px!important}.image-caption[data-astro-cid-6kov3kig]{font-size:.8rem;padding:0 1rem}}
+</style></head> <body data-astro-cid-gvpn4u4b> <header data-astro-cid-gvpn4u4b> <nav data-astro-cid-dmqpwcec> <ul data-astro-cid-dmqpwcec> <li class data-astro-cid-dmqpwcec> <a href="/pl/" data-astro-cid-dmqpwcec>Posty</a> </li><li class data-astro-cid-dmqpwcec> <a href="/pl/about" data-astro-cid-dmqpwcec>O mnie</a> </li><li class data-astro-cid-dmqpwcec> <a href="/resume.html" data-astro-cid-dmqpwcec>CV</a> </li> </ul> <div class="lang-toggle" role="group" aria-label="Language" data-astro-cid-dmqpwcec> <a class="lang" href="/beer" title="Read in English" data-astro-cid-dmqpwcec>EN</a> <span class="lang current" data-astro-cid-dmqpwcec>PL</span> </div> </nav>  </header> <!-- 
+      1) Wrap sidebar + main in a single parent .post-layout
+         so flexbox can place them side by side on large screens 
+    --> <div class="post-layout" data-astro-cid-gvpn4u4b> <!-- SIDEBAR --> <aside class="post-layout-sidebar" data-astro-cid-gvpn4u4b> <!-- The nav container that will hold our generated TOC --><nav id="table-of-contents" class="toc"></nav> <script client:load>
+  window.addEventListener('DOMContentLoaded', () => {
+    buildTOC();
+    highlightActiveHeading();
+  });
+
+  // 1. Build the TOC once the page is loaded
+  function buildTOC() {
+    const chapterHeadings = Array.from(document.querySelectorAll('h2.chapter[id]'));
+    const tocContainer = document.getElementById('table-of-contents');
+    if (!tocContainer) return;
+
+    const ul = document.createElement('ul');
+
+    chapterHeadings.forEach((heading) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+
+      // The heading has an `id` like "intro" or "symptoms"
+      a.href = `#${heading.id}`;
+
+      a.textContent = heading.textContent.trim();
+
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+
+    tocContainer.appendChild(ul);
+  }
+
+    function highlightActiveHeading() {
+      const links = Array.from(document.querySelectorAll('#table-of-contents a'));
+      const headingEls = links.map((link) => document.getElementById(link.hash.slice(1)));
+
+      // 3. Create the observer
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            console.log(
+              `Heading: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`
+            );
+            if (entry.isIntersecting) {
+              // Remove 'active' from all links
+              links.forEach((l) => l.classList.remove('active'));
+
+              // Highlight the link for the heading that just entered
+              const activeLink = links.find(
+                (l) => l.hash === `#${entry.target.id}`
+              );
+              if (activeLink) {
+                activeLink.classList.add('active');
+              }
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: '-15% 0px -60% 0px',
+          threshold: 0,
+        }
+      );
+
+      // 4. Observe each heading
+      headingEls.forEach((el) => {
+        if (el) {
+          console.log(`Observing heading: ${el.id}`);
+          observer.observe(el);
+        }
+      });
+    }
+</script> </aside> <!-- MAIN CONTENT AREA --> <div class="post-layout-content" data-astro-cid-gvpn4u4b> <main data-astro-cid-gvpn4u4b> <article data-astro-cid-gvpn4u4b>  <div class="post-title" data-astro-cid-resui2ln> <h1 data-astro-cid-resui2ln>Warzenie piwa, a inżynieria oprogramowania</h1> <p class="post-date" data-astro-cid-resui2ln> <span class="publish-label" data-astro-cid-resui2ln>Publish date:</span> 2026-06-28 </p> </div>  <div class="image-container" data-astro-cid-6kov3kig> <img src="/beer/first_ollie.jpg" alt="First Ollie beer bottles" style="max-width: 100%; max-height: 400px;" class data-astro-cid-6kov3kig> <p class="image-caption" data-astro-cid-6kov3kig>Zabutelkowane First Ollie</p> </div>  <h2 id="intro" class="chapter" data-astro-cid-5d3zeytc> <a href="#intro" data-astro-cid-5d3zeytc>Wstęp</a> </h2>  <p>
+Zaczęło się od tego, że znajomy zaprosił mnie na posmakowanie piw, które uwarzył jego kolega w nowo założonym
+    browarze. Byłem bardzo ciekawy. Piwa okazały się znakomite. Ten wieczór zainspirował mnie, żeby dowiedzieć się, jak
+    wygląda proces warzenia piwa oraz spróbować zrobić swoje piwo w domu.
+</p> <p>
+Zacząłem więc od ogólnych filmów na YouTubie. Zapoznałem się z głównymi etapami warzenia piwa,
+    składnikami oraz najczęściej używanymi metodami. Po zapoznaniu się z podstawami przeczytałem też książkę "Jak warzyć
+    piwo" Johna Palmera.
+</p> <h2 id="how" class="chapter" data-astro-cid-5d3zeytc> <a href="#how" data-astro-cid-5d3zeytc>Jak powstaje piwo?</a> </h2>  <p>
+Wyjaśnię w bardzo dużym skrócie jak się robi piwo. Piwo zazwyczaj składa się z czterech składników: wody, słodów
+    zbożowych, chmielu oraz drożdży. Słody to ziarna zbóż, które zaczęły kiełkować, ale w odpowiednim momencie zostały
+    zatrzymane i wysuszone (aby zmaksymalizować skrobię w ziarnach). Te słody są odpowiednio mieszane w wodzie.
+    Następnie gotujemy mieszaninę wraz z dodanym chmielem, aby mieć pewność, że w roztworze nie ma żadnych
+    niepożądanych bakterii. Teraz najważniejsze. Po schłodzeniu roztworu dodajemy drożdże, które są
+    jednokomórkowymi grzybami. Drożdże zjadają cukry z naszego roztworu i produkują z niego alkohol (etanol) oraz
+    dwutlenek węgla. Tak w skrócie powstaje piwo.
+</p> <h2 id="why" class="chapter" data-astro-cid-5d3zeytc> <a href="#why" data-astro-cid-5d3zeytc>Dlaczego?</a> </h2>  <p>
+Moją inicjalną motywacją do spróbowania warzenia piwa w domu była chęć poznania samego procesu oraz ciekawość "jak
+    daleko" takie piwo będzie odbiegało od piw ogólnodostępnych w sklepach czy barach. Kolejnym powodem była
+    potencjalna możliwość dostosowania receptury do moich własnych preferencji. Coś unikalnego, czego nie da się kupić.
+    Ponadto w tych czasach, kiedy niemal wszystkie artykuły spożywcze kupujemy w sklepach, fajnie jest mieć
+    własnoręcznie zrobione "przetwory".
+</p> <h2 id="first" class="chapter" data-astro-cid-5d3zeytc> <a href="#first" data-astro-cid-5d3zeytc>Pierwsza warka</a> </h2>  <p>
+W aktualnych czasach naturalnym krokiem dla początkującego piwowara domowego jest użycie "brew kitu", czyli
+    gotowego zestawu startowego, który zawiera wszystkie wymagane składniki. Taki właśnie był też mój pierwszy krok.
+    Zamówiłem zestaw, z którego powinno wyjść piwo typu American Amber Ale.
+</p> <p>
+Poza samym zestawem, potrzebowałem jeszcze niezbędnych przyrządów, takich jak fermentor, wąż do rozlewania,
+    glukoza, butelki, kapsle, kapslownica, itd. Szczęśliwie <a href="https://www.browamator.pl">Browamator</a> oferuje
+    również zestawy startowe zawierające wymagane przyrządy. Właśnie od takiego gotowego zestawu zacząłem.
+</p> <p>
+Nadszedł dzień wstawienia pierwszej warki. W przypadku brew kitów, proces jest uproszczony. Wystarczy gotować
+    przygotowane rozcieńczone ekstrakty, dodać chmiel, schłodzić i przelać do odkażonego fermentora. Kiedy temperatura
+    w fermentorze spadła do około 19-20°C, dodałem drożdże i zamknąłem fermentor. Teraz nadszedł najtrudniejszy etap.
+    Czekanie... Po około 10 dniach, zgodnie z instrukcją, dodałem dodatkową porcję chmielu do fermentora na kolejne 4
+    dni (tak zwane "chmielenie na zimno").
+</p> <p>
+Po około dwóch tygodniach, pobrałem próbkę, aby upewnić się, że fermentacja się zakończyła (poprzez zmierzenie
+    gęstości). Wynik był pozytywny, więc przyszedł czas na butelkowanie. Butelki zostały odkażone, a do każdej z nich
+    dodałem około 4g glukozy. Glukoza jest potrzebna do refermentacji w butelkach, która spowoduje, że piwo będzie
+    gazowane. Co trwa kolejne dwa tygodnie... Czekanie przy pierwszej warce było dosyć ciężkie. Zdecydowanie
+    najtrudniejsza część procesu.
+</p> <p>
+Po około 10 dniach od butelkowania schłodziłem jedną butelkę na pierwszy test. Wynik był bardzo zadowalający! Piwo
+    miało piękny bursztynowy kolor, stabilną pianę i wyczuwalny aromat chmielowy. W smaku było bardzo ciekawe.
+    Pamiętam, że moja pierwsza myśl, to "to już jest lepsze niż większość piw dostępnych w sklepach".
+    Byłem bardzo usatysfakcjonowany.
+</p> <h2 id="next-rounds" class="chapter" data-astro-cid-5d3zeytc> <a href="#next-rounds" data-astro-cid-5d3zeytc>Kolejne próby</a> </h2>  <p>
+Jak już wspominałem, podczas pierwszej warki było dosyć dużo czekania. Postanowiłem w międzyczasie uwarzyć ciemne
+    delikatne oraz niskoalkoholowe piwo dla mojej żony. Coś w stylu Dark Mild Ale. W tym przypadku nadal użyłem
+    ekstraktu, ale dodatkowo użyłem też dodatkowych słodów, które miały dodać ciemnego koloru oraz karmelowego posmaku.
+</p> <p>
+Wspomniane piwo dla żony było pierwszym eksperymentem, więc zrobiłem mniejszą warkę o objętości około 6 litrów.
+    W związku z tym zostało mi całkiem sporo ekstraktu słodowego. Postanowiłem więc wstawić kolejną warkę.
+    Tym razem wybór padł na jeden z moich ulubionych (na tamten czas) gatunków piwa, czyli Belgian Blond Ale.
+    Okazało się, że to piwo ma całkiem prostą recepturę. Zatem moją trzecią warką było właśnie Belgian Blond Ale.
+</p> <p>
+Po pewnym czasie zdecydowałem się na kolejny krok - uwarzyć piwo z zacierania słodów. Można powiedzieć, że jest to
+    już pełnoprawna metoda warzenia piwa, która jest używana w małych i dużych komercyjnych browarach. Chodzi o to, aby
+    użyć słodów jęczmiennych, pszenicznych lub innych (zależy od gatunku piwa), a następnie utrzymać je w wodzie o
+    ustalonej temperaturze oraz przez ustalony czas, tak aby zmienić skrobię w słodach w prostsze cukry
+    fermentowalne, z którymi drożdże będą mogły sobie poradzić. Ze względu na fakt, że nie mam garnka o pojemności
+    30 litrów lub większej, zrobiłem częściowe zacieranie (w 11 litrach), które następnie zostało uzupełnione
+    ekstraktem, tak aby uzyskać pożądaną gęstość inicjalną (która wpływa na finalną zawartość alkoholu w piwie).
+    Efekty tego warzenia ujawnią się w niedalekiej przyszłości, natomiast sam proces przebiegł pomyślnie.
+</p> <h2 id="results" class="chapter" data-astro-cid-5d3zeytc> <a href="#results" data-astro-cid-5d3zeytc>Efekty</a> </h2>  <p>
+W efekcie po prawie dwóch miesiącach i czterech warkach wyszło około 130 butelek piwa z czterech różnych gatunków.
+    Dużą częścią tego podzieliłem się z rodziną i przyjaciółmi, pozostałe butelki leżakują w piwnicy.
+    Wyszło tego nawet trochę za dużo. Wynika to z faktu, że zazwyczaj receptury są na objętość ~20 litrów. W moim
+    przypadku, gdzie jeszcze jestem w fazie eksploracji różnych gatunków piwnych, zapewne lepszą strategią byłoby
+    warzenie warek o mniejszej objętości, na przykład ~10 litrów. Z drugiej strony w tych przypadkach mam wrażenie,
+    że nakład pracy nie jest adekwatny do efektów.
+</p> <p>
+Jako ciekawostkę mogę podać, że cena produkcji jednej butelki piwa (0.5 litra) w moim przypadku wyniosła około
+    1.5 PLN (~0.35 USD). To jest oczywiście przy założeniu, że już się posiada wymagany sprzęt do fermentacji oraz
+    butelkowania. Czyli łączna cena surowców podzielona przez liczbę butelek.
+</p> <h2 id="labels" class="chapter" data-astro-cid-5d3zeytc> <a href="#labels" data-astro-cid-5d3zeytc>Etykiety</a> </h2>  <p>
+Mając kilka rodzajów piwa oraz co najmniej kilkadziesiąt butelek, stwierdziłem, że niezbędne będzie oznaczenie
+    butelek. Wykorzystałem tę okazję, aby zaprojektować własny szablon etykiet, nadać nazwę mojemu "browarowi" oraz
+    wymyślić nazwy dla uwarzonych piw. Było to bardzo kreatywne oraz zabawne ćwiczenie, bardzo mi się to podobało.
+    W efekcie powstałe etykiety nadały relatywnie profesjonalny oraz rzemieślniczy charakter moim butelkom.
+</p> <h2 id="brewing-vs-software" class="chapter" data-astro-cid-5d3zeytc> <a href="#brewing-vs-software" data-astro-cid-5d3zeytc>Warzenie piwa, a inżynieria oprogramowania</a> </h2>  <p>
+Po przejściu, kilka razy, całego procesu warzenia piwa, od zamówienia surowców, do otwarcia pierwszej butelki
+    naszło mnie kilka refleksji. Chciałbym tutaj porównać te dwa wytwórcze procesy oraz podzielić się moimi
+    spostrzeżeniami i odczuciami.
+</p> <p> <strong>Namacalny produkt</strong> - w przypadku procesu warzenia piwa, na końcu otrzymujemy namacalny produkt.
+    Butelkę, którą możemy wziąć do ręki. Otworzyć lub wręczyć komuś. Z jakiegoś powodu było to bardzo
+    satysfakcjonujące. W przypadku inżynierii oprogramowania prawie zawsze końcowy produkt jest wirtualny.
+</p> <p> <strong>Kompletność</strong> - uwarzone i zabutelkowane piwo jest gotowym produktem, który w istotny sposób nie
+    zmieni swoich właściwości ani przeznaczenia. W przypadku cyfrowych produktów <a href="https://josem.co/the-beauty-of-finished-software/">prawie nigdy</a> nie jest to prawda. Ciągłe zmiany,
+    usprawnienia, aktualizacje, nowe funkcjonalności, poprawki błędów itp. Oczywiście nie jest to dziwne. Obie te
+    rodziny produktów są zupełnie innej natury i nie ma nic złego w tych różnicach. Natomiast efekt kompletności, na
+    pewno wpłynął na moje poczucie satysfakcji z procesu warzenia piwa.
+</p> <p> <strong>Dystrybucja</strong> - w przypadku piwa, dystrybucja jest bardzo prosta. Mogę zabrać butelki i fizycznie
+    wręczyć je komuś. Jest to na tyle naturalna czynność, że nie trzeba niczego wyjaśniać. W przypadku oprogramowania,
+    jest to bardziej skomplikowane. Jeśli produktem jest aplikacja webowa, to wystarczy podać adres URL. To byłoby
+    całkiem proste ale zazwyczaj wiąże się to ze stworzeniem nowego konta lub konfiguracją. Jeszcze gorzej, jeśli
+    produktem jest biblioteka lub framework. W tych przypadkach przenosimy na użytkownika trudy integracji oraz
+    eksploracji API. Z drugiej strony w przypadku oprogramowania, dostęp może być dużo bardziej powszechny. Miliony
+    użytkowników na całym świecie mogą korzystać z tego produktu. Teoretycznie jesteśmy w stanie dostarczyć milion
+    butelek piwa, ale w praktyce byłoby to bardzo skomplikowane logistycznie oraz dosyć drogie, gdzie w przypadku
+    oprogramowania jest to praktycznie bezkosztowe.
+</p> <p> <strong>Skalowalność</strong> - w tym przypadku proces warzenia piwa, podobnie jak inne procesy, które wytwarzają
+    fizyczne zasoby, jest dużo bardziej ograniczony w aspekcie skalowalności. Rozważmy przykład, w którym chciałbym
+    produkować 100 litrów piwa zamiast 20 litrów (5x). Zamówienie większej ilości surowców nie jest problemem. Głównym
+    problemem byłoby rozwinięcie infrastruktury do wytworzenia 100 litrów piwa. Potrzebowałbym większej kadzi, do
+    warzenia piwa. Następnie dużo większej chłodnicy oraz fermentora. Dodatkowo musiałbym przygotować kilka kegów lub
+    ~200 butelek. Wszystko to wiąże się nie tylko z większym kosztem, ale również z większą wymaganą powierzchnią. W
+    przypadku domowego warzenia piwa również dochodzą ograniczenia prawne. W przypadku oprogramowania, w większości
+    przypadków, nie mamy takich ograniczeń. Jeśli potrzebujemy więcej przestrzeni dyskowej lub CPU, to możemy albo
+    relatywnie prosto je dodać, lub w przypadku usług chmurowych po prostu zmienić konfigurację infrastruktury.
+</p> <p>
+Jak widzimy oba typy procesów wytwórczych różnią się w wielu aspektach. Osobiście proces warzenia piwa był dla mnie
+    bardzo ciekawy, satysfakcjonujący oraz inspirujący, biorąc pod uwagę, że prawie całe moje dorosłe życie spędzam na
+    wytwarzaniu oprogramowania. Skłoniło mnie to też do refleksji nad pytaniem, czy wytwarzanie oprogramowania może być
+    bardziej namacalne oraz kompletne. Myślę, że do kompletności powinniśmy dążyć. Namacalność w oczywisty sposób nie
+    jest możliwa, ale myślę, że możemy to przełożyć na dobry design produktu. Tak, aby użytkownik pierwszy raz stykający
+    się z naszym produktem, wiedział do czego on służy, jak z niego może skorzystać i jakie ma możliwości.
+</p> <h2 id="summary" class="chapter" data-astro-cid-5d3zeytc> <a href="#summary" data-astro-cid-5d3zeytc>Podsumowanie</a> </h2>  <p>
+Na ten moment jestem bardzo zadowolony z efektów. Wszystkie dotychczasowe warki były udane i smaczne. Bardzo wiele
+    się nauczyłem. Nowa umiejętność odblokowana. Celem na przyszłość jest iteracja po różnych stylach piwnych,
+    następnie wybranie małego grona ulubionych i dopracowanie ich receptur pod moje osobiste preferencje.
+</p> <p>
+Ponadto warzenie piwa jest prostsze niż się wydaje! Bardzo polecam spróbować.
+</p>  </article> </main> </div> </div>  <!-- Global styles for .post-layout and .post-layout-sidebar -->  </body></html>
