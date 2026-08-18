@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-gvpn4u4b> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The CLI we need</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.26/dist/katex.min.css" crossorigin="anonymous"><style>*,*:before,*:after{box-sizing:border-box}html,body{max-width:100%;overflow-x:hidden}html{-webkit-text-size-adjust:100%}:root{--bg-color: #111010;--text-primary: #ffe9c6;--text-secondary: #2AA198;--accent-color: #f97d43;--font-body: "Roboto", sans-serif;--font-code: "JetBrains Mono", monospace}html{font-size:19px}@media (max-width: 480px){html{font-size:16px}}@media (max-width: 360px){html{font-size:15px}}body{font-size:1rem;line-height:1.66;background-color:var(--bg-color);color:var(--text-primary);font-family:var(--font-body);margin:0;padding:0;word-wrap:break-word;overflow-wrap:break-word}h1{font-size:2.25rem;line-height:1.2}h2{font-size:1.75rem;line-height:1.3}h3{font-size:1.35rem;line-height:1.35}@media (max-width: 768px){h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.2rem}}@media (max-width: 480px){h1{font-size:1.75rem}h2{font-size:1.35rem}h3{font-size:1.1rem}}@media (max-width: 360px){h1{font-size:1.6rem}h2{font-size:1.25rem}h3{font-size:1.05rem}}a{color:var(--text-secondary);text-decoration:none}a:hover{text-decoration:underline}pre{background-color:#1e1e1e;border-radius:8px;padding:1rem;overflow-x:auto;margin:1rem 0;font-size:15px;font-family:var(--font-code)}code{background-color:transparent}pre>code{display:block}.toc ul{list-style:none;margin:0;padding:0}.toc li{margin:.5rem 0}.toc a{color:var(--text-secondary);text-decoration:none}.toc a:hover{text-decoration:underline}.toc a.active{font-weight:700;color:var(--accent-color)}nav[data-astro-cid-dmqpwcec]{padding:1rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;row-gap:.75rem}ul[data-astro-cid-dmqpwcec]{grid-column:2;list-style:none;padding:0;margin:0;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap}.lang-toggle[data-astro-cid-dmqpwcec]{grid-column:3;justify-self:end;display:inline-flex;align-items:center;gap:.75rem;font-size:.95rem}.lang[data-astro-cid-dmqpwcec]{color:var(--text-primary);font-size:.95rem;text-decoration:none;padding:.2rem .3rem;border-bottom:2px solid transparent;transition:all .3s ease-in-out}a[data-astro-cid-dmqpwcec].lang:hover{color:var(--accent-color)}.lang[data-astro-cid-dmqpwcec].current{color:var(--accent-color);border-bottom:2px solid var(--accent-color)}.lang[data-astro-cid-dmqpwcec].dimmed{opacity:.4}@media (max-width: 480px){ul[data-astro-cid-dmqpwcec]{gap:1rem}a[data-astro-cid-dmqpwcec]{font-size:1rem;padding:.4rem .8rem}}@media (max-width: 360px){ul[data-astro-cid-dmqpwcec]{gap:.5rem}a[data-astro-cid-dmqpwcec]{font-size:.9rem;padding:.3rem .6rem}}@media (max-width: 768px){nav[data-astro-cid-dmqpwcec]{grid-template-columns:1fr}ul[data-astro-cid-dmqpwcec]{grid-column:1}.lang-toggle[data-astro-cid-dmqpwcec]{grid-column:1;justify-self:center}}li[data-astro-cid-dmqpwcec]{display:inline}a[data-astro-cid-dmqpwcec]{color:var(--text-primary);font-size:1.2rem;padding:.5rem 1rem;border:1px solid transparent;transition:all .3s ease-in-out}ul[data-astro-cid-dmqpwcec] a[data-astro-cid-dmqpwcec]:hover{border:1px solid var(--accent-color);border-radius:4px;color:var(--accent-color)}.active[data-astro-cid-dmqpwcec] a[data-astro-cid-dmqpwcec]{color:var(--accent-color);font-weight:700;border-bottom:2px solid var(--accent-color)}hr[data-astro-cid-dmqpwcec]{margin-top:1rem;border:none;height:2px;background:var(--text-secondary);width:90%;max-width:800px;margin-left:auto;margin-right:auto}
+.post-title[data-astro-cid-resui2ln]{margin-bottom:2rem}.post-title[data-astro-cid-resui2ln] h1[data-astro-cid-resui2ln]{font-size:1.75rem;color:var(--accent-color);margin:0}.post-date[data-astro-cid-resui2ln]{font-size:1rem;color:var(--text-secondary);margin-top:.5rem}.publish-label[data-astro-cid-resui2ln]{font-weight:700;color:var(--text-primary)}
+.chapter[data-astro-cid-5d3zeytc]{font-size:2rem;margin-top:2rem;color:var(--accent-color)}.chapter[data-astro-cid-5d3zeytc] a[data-astro-cid-5d3zeytc]{color:var(--accent-color);text-decoration:none}.chapter[data-astro-cid-5d3zeytc] a[data-astro-cid-5d3zeytc]:hover{text-decoration:underline}
+.post-layout{display:flex;flex-direction:row}@media (min-width: 1024px){.post-layout{flex-direction:row}.post-layout-sidebar{position:fixed;left:2rem;top:10rem;width:200px;font-size:.85rem;padding:1rem;z-index:10}.post-layout-content{flex:1;max-width:1000px;margin:0 auto;padding-left:240px;padding-right:2rem}}@media (min-width: 1400px){.post-layout-content{max-width:1200px}}.post-layout-sidebar{display:none}@media (min-width: 1024px){.post-layout-sidebar{display:block}}@media (max-width: 1023px){.post-layout{flex-direction:column}.post-layout-content{width:100%;max-width:100%}}:global(pre){width:100%!important;max-width:100%!important;overflow-x:auto;box-sizing:border-box}:global(.astro-code){width:100%!important;max-width:100%!important;box-sizing:border-box}:global(.astro-code pre){width:100%!important;max-width:100%!important;overflow-x:auto;box-sizing:border-box}:global(.post-layout-content pre){max-width:100%!important;overflow-x:auto;word-wrap:break-word;white-space:pre-wrap}main[data-astro-cid-gvpn4u4b]{padding:2rem 1rem;max-width:900px;margin:0 auto;width:100%;box-sizing:border-box}@media (min-width: 1024px){main[data-astro-cid-gvpn4u4b]{padding:2rem 0;max-width:none}}@media (max-width: 768px){main[data-astro-cid-gvpn4u4b]{padding:1.5rem .75rem}}@media (max-width: 480px){main[data-astro-cid-gvpn4u4b]{padding:1rem .5rem}}article[data-astro-cid-gvpn4u4b]{max-width:800px;width:100%;margin:0 auto;color:var(--text-primary);box-sizing:border-box;word-wrap:break-word;overflow-wrap:break-word}h1[data-astro-cid-gvpn4u4b],h2[data-astro-cid-gvpn4u4b],h3[data-astro-cid-gvpn4u4b]{color:var(--accent-color);margin-top:1.5rem;word-wrap:break-word;overflow-wrap:break-word}p[data-astro-cid-gvpn4u4b]{color:var(--text-secondary);word-wrap:break-word;overflow-wrap:break-word;hyphens:auto}img[data-astro-cid-gvpn4u4b]{max-width:100%;max-height:400px;width:auto;height:auto;border-radius:8px;margin:1rem 0;object-fit:contain}@media (max-width: 768px){img[data-astro-cid-gvpn4u4b]{max-height:300px}}@media (max-width: 480px){img[data-astro-cid-gvpn4u4b]{max-height:250px}}blockquote[data-astro-cid-gvpn4u4b]{border-left:4px solid var(--accent-color);padding-left:1rem;color:var(--text-primary);font-style:italic;margin:1rem 0}code[data-astro-cid-gvpn4u4b]{font-family:monospace;background:#ffffff1a;padding:.2rem .4rem;border-radius:4px;font-size:.95rem}
+.image-container[data-astro-cid-6kov3kig]{display:flex;flex-direction:column;align-items:center;margin:1.5rem 0}.image-container[data-astro-cid-6kov3kig]>img[data-astro-cid-6kov3kig]{width:auto;height:auto;border-radius:8px;object-fit:contain;box-shadow:0 4px 8px #0000001a;cursor:zoom-in}.image-container[data-astro-cid-6kov3kig] img[data-astro-cid-6kov3kig].inverted{filter:invert(1)}.lightbox[data-astro-cid-6kov3kig]{border:none;padding:0;background:transparent;max-width:none;max-height:none;outline:none}.lightbox[data-astro-cid-6kov3kig]::backdrop{background:#000c}.lightbox[data-astro-cid-6kov3kig] img[data-astro-cid-6kov3kig]{display:block;max-width:90vw!important;max-height:90vh!important;width:auto;height:auto;border-radius:8px;cursor:zoom-out}.lightbox-caption[data-astro-cid-6kov3kig]{margin:.5rem auto 0;font-size:.9rem;color:var(--text-primary, #ffe9c6);font-style:italic;text-align:center;max-width:90vw}.image-caption[data-astro-cid-6kov3kig]{margin-top:.5rem;font-size:.9rem;color:var(--text-secondary, #666);font-style:italic;text-align:center;max-width:600px}@media (max-width: 768px){.image-container[data-astro-cid-6kov3kig]{margin:1rem 0}.image-container[data-astro-cid-6kov3kig]>img[data-astro-cid-6kov3kig]{max-height:300px!important}}@media (max-width: 480px){.image-container[data-astro-cid-6kov3kig]>img[data-astro-cid-6kov3kig]{max-height:250px!important}.image-caption[data-astro-cid-6kov3kig]{font-size:.8rem;padding:0 1rem}}
+</style></head> <body data-astro-cid-gvpn4u4b> <header data-astro-cid-gvpn4u4b> <nav data-astro-cid-dmqpwcec> <ul data-astro-cid-dmqpwcec> <li class data-astro-cid-dmqpwcec> <a href="/" data-astro-cid-dmqpwcec>Posts</a> </li><li class data-astro-cid-dmqpwcec> <a href="/about" data-astro-cid-dmqpwcec>About</a> </li><li class data-astro-cid-dmqpwcec> <a href="/resume.html" data-astro-cid-dmqpwcec>Resume</a> </li> </ul> <div class="lang-toggle" role="group" aria-label="Language" data-astro-cid-dmqpwcec> <span class="lang current" data-astro-cid-dmqpwcec>EN</span> <a class="lang" href="/pl/dst" title="Czytaj po polsku" data-astro-cid-dmqpwcec>PL</a> </div> </nav>  </header> <!-- 
+      1) Wrap sidebar + main in a single parent .post-layout
+         so flexbox can place them side by side on large screens 
+    --> <div class="post-layout" data-astro-cid-gvpn4u4b> <!-- SIDEBAR --> <aside class="post-layout-sidebar" data-astro-cid-gvpn4u4b> <!-- The nav container that will hold our generated TOC --><nav id="table-of-contents" class="toc"></nav> <script client:load>
+  window.addEventListener('DOMContentLoaded', () => {
+    buildTOC();
+    highlightActiveHeading();
+  });
+
+  // 1. Build the TOC once the page is loaded
+  function buildTOC() {
+    const chapterHeadings = Array.from(document.querySelectorAll('h2.chapter[id]'));
+    const tocContainer = document.getElementById('table-of-contents');
+    if (!tocContainer) return;
+
+    const ul = document.createElement('ul');
+
+    chapterHeadings.forEach((heading) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+
+      // The heading has an `id` like "intro" or "symptoms"
+      a.href = `#${heading.id}`;
+
+      a.textContent = heading.textContent.trim();
+
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+
+    tocContainer.appendChild(ul);
+  }
+
+    function highlightActiveHeading() {
+      const links = Array.from(document.querySelectorAll('#table-of-contents a'));
+      const headingEls = links.map((link) => document.getElementById(link.hash.slice(1)));
+
+      // 3. Create the observer
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            console.log(
+              `Heading: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`
+            );
+            if (entry.isIntersecting) {
+              // Remove 'active' from all links
+              links.forEach((l) => l.classList.remove('active'));
+
+              // Highlight the link for the heading that just entered
+              const activeLink = links.find(
+                (l) => l.hash === `#${entry.target.id}`
+              );
+              if (activeLink) {
+                activeLink.classList.add('active');
+              }
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: '-15% 0px -60% 0px',
+          threshold: 0,
+        }
+      );
+
+      // 4. Observe each heading
+      headingEls.forEach((el) => {
+        if (el) {
+          console.log(`Observing heading: ${el.id}`);
+          observer.observe(el);
+        }
+      });
+    }
+</script> </aside> <!-- MAIN CONTENT AREA --> <div class="post-layout-content" data-astro-cid-gvpn4u4b> <main data-astro-cid-gvpn4u4b> <article data-astro-cid-gvpn4u4b>  <div class="post-title" data-astro-cid-resui2ln> <h1 data-astro-cid-resui2ln>The CLI we need</h1> <p class="post-date" data-astro-cid-resui2ln> <span class="publish-label" data-astro-cid-resui2ln>Publish date:</span> 2026-08-18 </p> </div>  <div class="image-container" data-astro-cid-6kov3kig> <img src="/dst/dst.png" alt="dst help" style="max-width: 100%; max-height: 400px;" class data-astro-cid-6kov3kig> <p class="image-caption" data-astro-cid-6kov3kig>Current commands in dst</p> <dialog class="lightbox" data-astro-cid-6kov3kig> <img src="/dst/dst.png" alt="dst help" class data-astro-cid-6kov3kig> <p class="lightbox-caption" data-astro-cid-6kov3kig>Current commands in dst</p> </dialog> </div> <script type="module">document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".image-container").forEach(o=>{const t=o.querySelector(":scope > img"),e=o.querySelector("dialog");!t||!e||(t.addEventListener("click",()=>e.showModal()),e.addEventListener("click",()=>e.close()))})});</script>  <h2 id="intro" class="chapter" data-astro-cid-5d3zeytc> <a href="#intro" data-astro-cid-5d3zeytc>Intro</a> </h2>  <p>
+For a long time I've wanted to consolidate my practices and methods around
+    working with data and designing database schemas from the backend
+    perspective, but back then I didn't know yet in what form I'd like to
+    materialize it. Should it be a library, a methodology, a CLI, or maybe a
+    full platform with a graphical or web interface? Each of those options had
+    its own set of pros and cons. At that time I didn't have a concrete vision
+    yet, just a general feeling and desire, so it ended up going nowhere.
+</p> <p>
+In the first months at ConnectyAI I faced the problem of designing and
+    implementing an interface which would let the application backend connect
+    to a given set of data sources, such as Postgres, BigQuery, Snowflake,
+    Redshift, etc. That interface and the corresponding implementations
+    supported functionalities like schema inspection, query execution, listing
+    query history, and so on. After this experience my aforementioned feeling
+    only got stronger. Moreover, I gained an intuition on to what extent a
+    consistent interface for many data sources is possible and useful.
+</p> <p>
+Another important event was the moment when the agentic approach to LLMs
+    became very useful in practice (since the times of Claude Code and improved
+    LLM models).
+</p> <h2 id="what" class="chapter" data-astro-cid-5d3zeytc> <a href="#what" data-astro-cid-5d3zeytc>So what do we need?</a> </h2>  <p>
+So far I haven't said anything concrete. That's because I wanted to
+    structure this post according to the chronological order of my experiences
+    and actions.
+</p> <p>
+So what do we need (in this context)? We need software which:
+</p><ul> <li>reflects my practices and methods for working with data</li> <li>enables LLM agents to work according to the previous point</li> <li>supports many different data sources and is open for extensions</li> </ul>  <p>
+The beginning, of course, was writing specialized agents and skills in
+    Claude Code, which would reflect my most common tasks around data. It was
+    an improvement, but maintaining and evolving those entities turned out
+    rather mediocre. Moreover, passing data sources and potentially secrets
+    could be done comfortably only in non-production environments. So I
+    abandoned this approach.
+</p> <p>
+As it turned out very quickly, the agentic approach to LLMs benefits a lot
+    from using CLI tools. Well-known CLIs/SDKs are obviously baked into the
+    models, but even in case of niche or new programs, agents are able to
+    quickly scan the documentation and build up the context. Locally, programs
+    allow for a very fast feedback loop, which converges to agents
+    understanding the given tool.
+</p> <p>
+At this point I decided that a CLI program is the perfect form for my tool
+    for working with data. <strong>A deterministic program which allows
+      fundamental operations on many data sources through a consistent
+      abstract interface</strong> with rich documentation will be a perfect
+    foundation for LLM agents. Something that once would be a rather awkward
+    CLI interface, which most programmers wouldn't use willingly, now becomes a
+    layer which agents use without any problem, based on a high-level task.
+</p> <p>
+Moreover, having the mentioned CLI between a human and LLM agents lets us
+    introduce safety measures which wouldn't be possible when using agents
+    directly. One example is access to data sources. In this case they are
+    always defined by a human and secrets are never available to the agent. It
+    can only use specific CLI commands and build solutions or analyses on top
+    of them. What's more, the agent will never be able to delete
+    (<code>DROP</code>) or modify (<code>UPDATE</code>) data which lives under
+    the given connection (<code>dst conns</code>). The CLI simply doesn't
+    support such operations, which is a limitation, but on the other hand it
+    provides safety. It's my preference and a conscious tradeoff.
+</p> <p>
+Yet another advantage of a CLI is the fact that I don't have to spend time
+    on designing and implementing intermediate graphical or web interfaces,
+    which is usually a hard and time-consuming task, if we want to do it
+    properly. So I can focus on designing and implementing the essential
+    functionalities.
+</p> <h2 id="we" class="chapter" data-astro-cid-5d3zeytc> <a href="#we" data-astro-cid-5d3zeytc>We?</a> </h2>  <p>
+We? Meaning who? By "we" I mean myself and LLM agents that will be using this CLI.
+</p> <p>
+It might turn out that, by accident, this tool will be useful also for
+    others, but in the near future I don't plan to publish it. I use the
+    mentioned CLI actively and even at the current early stage it's very
+    useful, but it's not yet close to the scope of functionality I have
+    planned.
+</p> <h2 id="dst" class="chapter" data-astro-cid-5d3zeytc> <a href="#dst" data-astro-cid-5d3zeytc>dst</a> </h2>  <p>
+As you can see on the screenshot, I named the CLI <code>dst</code>, which
+    stands for <code>Damian Skrzypiec Tool</code>. This requires a bit of
+    explanation. My name is there not because I'm the author and I want to
+    remind users who created the tool, but for two reasons. The most important
+    one is the fact that I didn't have any other idea, and the second one is
+    to emphasize that it's a tool which reflects my preferences and
+    conventions.
+</p> <p>
+After some time <code>dst</code> became just a three-letter word, an
+    alias, which doesn't need to have any other meaning than a reference to
+    the tool. Just like <code>git</code>. The origin of the name doesn't
+    matter here, neither does its expansion.
+</p> <h2 id="current" class="chapter" data-astro-cid-5d3zeytc> <a href="#current" data-astro-cid-5d3zeytc>Current features</a> </h2>  <p>
+Currently <code>dst</code> supports the following families of commands:
+</p><ul> <li> <code>dst conns</code> - for creating and managing connections to data
+        sources. At the moment <code>Postgres, BigQuery, Snowflake, SQLite,
+          CloudWatchLogs</code> are supported. Connection secrets are stored
+        in the system keyring, thanks to the <a href="https://github.com/zalando/go-keyring">go-keyring</a> library.
+</li> <li> <code>dst ex</code> - for exploring data sources. It allows schema
+        inspection, listing objects (tables, views, etc.), columns, data
+        types, and so on.
+</li> <li> <code>dst query</code> - for executing, exporting, and other
+        functionalities related to queries. It also includes computing
+        statistics for a given set of columns of a given object.
+</li> </ul>  <h2 id="current-use" class="chapter" data-astro-cid-5d3zeytc> <a href="#current-use" data-astro-cid-5d3zeytc>Current usage</a> </h2>  <p>
+Currently I use <code>dst</code> mainly as a <code>tool</code> in Claude
+    Code (CC), where additionally I have a <code>CC SKILL</code> which
+    contains my preferences regarding formatting SQL queries and a high-level
+    strategy of using <code>dst</code> (the details of <code>dst</code> the
+    agent takes directly from the documentation).
+</p> <p>
+My current main scenarios of using <code>dst</code> in cooperation with LLM agents are:
+</p><ul> <li> <strong>Ad-hoc text-to-SQL</strong> - the simplest usage.
+<code>dst</code> alone enables deeper context of object metadata and
+        statistics of key columns. Based on this context the agent can
+        generate better SQL queries. Moreover, the fact that <code>dst</code>
+supports many different data sources allows the agent to generate SQL
+        queries for many data sources in a single session. An example might be
+        an analytical query on both test and production environments, where
+        schemas might slightly differ (because there was no deployment yet).
+</li> <li> <strong>Developing data models</strong> - in this scenario I usually
+        have a data model defined in a repository. Extending existing models
+        or adding new ones would be possible just through cooperation with an
+        LLM agent. In practice, however, it's worth confronting the designed
+        entities with the actual data. An agent using <code>dst</code> can
+        perform such tests on a set of given connections and aggregate the
+        results in the form of a report. That in turn is an input for the next
+        iteration of improving extensions in the data model. Based on my
+        experience I can say that it brought a lot of value and saved a lot of
+        (human) time.
+</li> <li> <strong>Developing and debugging backends</strong> - very often
+        backend services are, in some part, a layer of abstraction over shared
+        and durable application state, which is quite often represented by a
+        database. In such a setup it's natural that an LLM agent working on
+        backend problems (in a session and backend repository) would benefit a
+        lot from the additional context of those databases. One example is
+        developing the schema of an operational database and generating
+        migration scripts between versions. Another very useful application,
+        especially if the backend is a distributed system, is the ability to
+        debug problems where the LLM agent can correlate the source code with
+        the actual data in the database. What's more, we can enrich our
+        context with operational logs of processes (<code>dst</code> supports
+        AWS CloudWatch as <code>dst conns</code>). In such a situation the
+        agent (and the programmer) have at their disposal everything that's
+        needed to understand the problem and solve it.
+</li> <li> <strong>Easy operations on many data sources</strong> - it doesn't
+        sound like something hard and in fact it isn't, but in practice it's
+        often quite irritating. For example, I have <code>N</code> clients,
+        each one in BigQuery, but in a separate project, each with an
+        identical or very similar data schema. I'd like to run an analysis
+        across all clients. In the past that would require at least writing a
+        script, handling many secrets, then executing queries and summarizing
+        the results. Using <code>dst</code>, an agent can inspect schemas for
+        each client on its own, execute appropriate queries, and then
+        aggregate the results in the form of a report. In practice it's very
+        useful and saves a lot of time.
+</li> </ul>  <h2 id="future" class="chapter" data-astro-cid-5d3zeytc> <a href="#future" data-astro-cid-5d3zeytc>Planned features</a> </h2>  <p>
+As you can see on the initial screenshot, I've already planned adding the
+<code>dst migr</code> command, which will be used for planning, executing,
+    and tracking data migrations between two data sources defined as
+<code>dst conns</code>. The idea is as follows. We create a migration plan
+    - a list of objects together with various properties regarding the
+    migration (how the data should be split into smaller chunks, how much we
+    can parallelize reading, etc.). The default plan will be generated
+    automatically, based on the source and target schemas. Then, however, a
+    human or an agent will be able to analyze the default proposal and
+    introduce improvements. In the world of data things can vary a lot, so I
+    want to be prepared for possibly high flexibility of the process. Based on
+    the plan, the planned "chunks" of data will be prepared for each of the
+    objects. All this metadata will be stored in a local SQLite. This will
+    give us the ability to track migration progress and to eventually stop and
+    resume the process at any moment.
+</p> <p>
+Planned, but not yet implemented, is the functionality for listing and
+    searching historical queries for a given connection. It's a much smaller
+    feature than migrations, but very useful in practice. It should be added
+    soon.
+</p> <h2 id="summary" class="chapter" data-astro-cid-5d3zeytc> <a href="#summary" data-astro-cid-5d3zeytc>Summary</a> </h2>  <p>
+Despite the early stage of development, <code>dst</code> is already very
+    useful. I plan to keep developing it, so that it supports the vast
+    majority of my work around data and systems operating on data. Over time
+    I will certainly try to add support for more data sources. I'd like
+<code>dst</code> to aggregate my knowledge about a given data source and
+    its characteristics through the implementation of a shared interface,
+    properly covering possible differences and peculiarities.
+</p> <p>
+Regarding publishing <code>dst</code>, I can't promise anything. The future will tell.
+</p>  </article> </main> </div> </div>  <!-- Global styles for .post-layout and .post-layout-sidebar -->  </body></html>
